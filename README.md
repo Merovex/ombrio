@@ -18,4 +18,4 @@
 
 ### Desktop
 
-* [PhotonKit](http://photonkit.com/) for Electron
+* [PhotonKit](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
