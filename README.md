@@ -10,6 +10,8 @@
 
 ## Plugins
 
+* Use Electron for desktop because gives access to the filesystem.
+
 ### Editor
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown.
 * [DraftJS](https://draftjs.org/) if using React
