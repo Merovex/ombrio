@@ -16,6 +16,7 @@
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown.
 * [DraftJS](https://draftjs.org/) if using React
 
-### Desktop
+### Desktop / Electron
 
 * [PhotonKit](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
+* [Awesome Electron](https://github.com/sindresorhus/awesome-electron) for links to cool things with Electron.
