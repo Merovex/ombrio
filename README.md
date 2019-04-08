@@ -13,7 +13,7 @@
 * Use Electron for desktop because gives access to the filesystem.
 
 ### Editor
-* [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown.
+* [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown. [this](https://github.com/Microsoft/monaco-editor)
 * [DraftJS](https://draftjs.org/) if using React
 
 ### Desktop / Electron
