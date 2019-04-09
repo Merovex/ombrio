@@ -14,7 +14,7 @@
 
 ### Editor
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown. [this](https://github.com/Microsoft/monaco-editor)
-* [DraftJS](https://draftjs.org/) if using React
+* [DraftJS](https://draftjs.org/) if using React [this](https://jpuri.github.io/react-draft-wysiwyg/#/)
 
 ### Desktop / Electron
 
