@@ -1,4 +1,6 @@
-# Ombrio - Full-Stack Toolchain for Professional Self-Publishers
+# Ombrio
+
+**Full-Stack Toolchain for Professional Self-Publishers**
 
 ## Features
 
