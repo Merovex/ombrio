@@ -1,4 +1,4 @@
-# ombrio
+# Ombrio - Full-Stack Toolchain for Professional Self-Publishers
 
 ## Features
 
@@ -10,9 +10,9 @@
 
 ## Courses
 
+* [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/lecture/8268510)
 * [Learn Modern Javascript (Build & Test Real Apps Now)](https://www.udemy.com/modern-javascript-from-the-beginning/)
 * [Beginning Modern JavaScript (Includes 10 Real Projects)](https://www.udemy.com/modern-javascript-from-the-beginning/)
-* [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/lecture/8268510)
 * [React Front To Back, Traversy](https://www.udemy.com/react-front-to-back/)
 
 ## Plugins
