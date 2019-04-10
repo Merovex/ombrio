@@ -6,22 +6,37 @@
 * Right-side file metadata
 * Center editor
 * Local storage
-*
+* [ProWritingAid API?](https://prowritingaid.com/en/App/API)
+
+## Courses
+
+* [Learn Modern Javascript (Build & Test Real Apps Now)](https://www.udemy.com/modern-javascript-from-the-beginning/)
+* [Beginning Modern JavaScript (Includes 10 Real Projects)](https://www.udemy.com/modern-javascript-from-the-beginning/)
+* [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/lecture/8268510)
+* [React Front To Back, Traversy](https://www.udemy.com/react-front-to-back/)
 
 ## Plugins
 
 * Use Electron for desktop because gives access to the filesystem.
+* [Reusable JS components](https://github.com/teambit/bit)
+
+### React
+
+* [State of React 2019](https://blog.bitsrc.io/state-of-react-state-management-in-2019-779647206bbc)
+* [React Context API replacing Redux?](https://blog.bitsrc.io/react-context-api-a-replacement-for-redux-6e20790492b3)
 
 ### Editor
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown. [this](https://github.com/Microsoft/monaco-editor)
 * [DraftJS](https://draftjs.org/) if using React [this](https://jpuri.github.io/react-draft-wysiwyg/#/)
+* [Quill for Angular BSD](https://github.com/KillerCodeMonkey/ngx-quill)
 
 ### Desktop / Electron
 
+* [Electron Forge w/ React](https://electronforge.io/templates)
 * [PhotonKit](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
 * [Awesome Electron](https://github.com/sindresorhus/awesome-electron) for links to cool things with Electron.
 
-## PouchDB and CouchDB
+### PouchDB and CouchDB
 
 PouchDB is a pure JavaScript NoSQL database that can be synced with a remote CouchDB database to create an [offline first](http://offlinefirst.org/) application.If you're not comfortable using PouchDB's map/reduce API you can use [pouchdb-find](https://github.com/nolanlawson/pouchdb-find). This is included by default.
 
