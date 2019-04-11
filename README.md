@@ -26,6 +26,7 @@
 
 * [State of React 2019](https://blog.bitsrc.io/state-of-react-state-management-in-2019-779647206bbc)
 * [React Context API replacing Redux?](https://blog.bitsrc.io/react-context-api-a-replacement-for-redux-6e20790492b3)
+* [React Desktop](https://github.com/gabrielbull/react-desktop) - React UI Components for macOS High Sierra and Windows 10
 
 ### Editor
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown. [this](https://github.com/Microsoft/monaco-editor)
@@ -35,8 +36,9 @@
 ### Desktop / Electron
 
 * [Electron Forge w/ React](https://electronforge.io/templates)
-* [PhotonKit](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
+* [PhotonKit (outdated)](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
 * [Awesome Electron](https://github.com/sindresorhus/awesome-electron) for links to cool things with Electron.
+* [7 Famous Desktop Apps Using Electron JS Framework](https://brainhub.eu/blog/electron-framework-example-apps/)
 
 ### PouchDB and CouchDB
 
