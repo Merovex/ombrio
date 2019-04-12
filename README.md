@@ -28,6 +28,10 @@
 * [React Context API replacing Redux?](https://blog.bitsrc.io/react-context-api-a-replacement-for-redux-6e20790492b3)
 * [React Desktop](https://github.com/gabrielbull/react-desktop) - React UI Components for macOS High Sierra and Windows 10
 
+### Database
+* [Building an offline-first app with React and RxDB](https://blog.logrocket.com/building-an-offline-first-app-with-react-and-rxdb-e97a1fa64356)
+* [rxdb](https://github.com/pubkey/rxdb) - A realtime Database for the Web
+
 ### Editor
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown. [this](https://github.com/Microsoft/monaco-editor)
 * [DraftJS](https://draftjs.org/) if using React [this](https://jpuri.github.io/react-draft-wysiwyg/#/)
