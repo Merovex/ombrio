@@ -36,9 +36,11 @@
 * [Monoco Editor](https://microsoft.github.io/monaco-editor/index.html) - if using Markdown. [this](https://github.com/Microsoft/monaco-editor)
 * [DraftJS](https://draftjs.org/) if using React [this](https://jpuri.github.io/react-draft-wysiwyg/#/)
 * [Quill for Angular BSD](https://github.com/KillerCodeMonkey/ngx-quill)
+* [Concurrent editor in React](https://medium.com/@ethanryan/making-a-simple-real-time-collaboration-app-with-react-node-express-and-yjs-a261597fdd44) [this](https://hackernoon.com/building-conclave-a-decentralized-real-time-collaborative-text-editor-a6ab438fe79f)
 
 ### Desktop / Electron
 
+* [Most Popular Technology Stack To Choose From: Full Stack Vs. MEAN Stack Vs. MERN Stack In 2019](https://hackernoon.com/most-popular-technology-stack-to-choose-from-full-stack-vs-mean-stack-vs-mern-stack-in-2019-d12c0a17439a)
 * [Electron Forge w/ React](https://electronforge.io/templates)
 * [PhotonKit (outdated)](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
 * [Awesome Electron](https://github.com/sindresorhus/awesome-electron) for links to cool things with Electron.

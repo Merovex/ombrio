@@ -1,33 +1,19 @@
+nav, aside { transition: all .3s ease; }
 .App {
-  text-align: center;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
+.dark, .dark textarea { color: #fff; background: #373f46; }
+/* #4f5a63; */
+.dark footer, .dark .footer, .dark header { background: #2d333a; }
+.dark nav, .dark aside { background: #373f46; }
+.dark nav h4 { color: #f8b71d; }
+.dark h1 { color: #ADB3B9; }
+.dark .Binder li+li { border-top: 1px solid #888; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.light { color: #2d333a !important; }
+.light footer, .light .footer, .light header { background: #DDDDDD; }
+.light nav, .light aside { background: #F8F8F8; }
+.light nav h4 { color: #3a5b78; }
+.light h1 { color: #373f46; }
+.light .Binder li+li { border-top: 1px solid #CCC; }
