@@ -4,7 +4,7 @@ import Drawer from './components/Drawer/Drawer';
 import StatusBar from './components/StatusBar/StatusBar';
 import Editor from './components/Editor/Editor';
 import Header from './components/Header/Header';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {

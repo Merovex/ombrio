@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import './Binder.css';
 
 class Binder extends Component {
   render() {
     return (
       <nav className="Binder">
-        <div className="BinderLogo footer"><h1>Ombrio</h1></div>
+        <div className="BinderLogo footer"><h2>Project</h2></div>
         <div className='BinderList'>
           <h4>Manuscript</h4>
           <ul>

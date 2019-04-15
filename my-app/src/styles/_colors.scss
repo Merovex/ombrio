@@ -1,0 +1,53 @@
+
+  $hue: 225; /* Blue */
+  $accent-hue: 25; /* Orange */
+  $text-color-normal: hsl($hue, 10%, 70%);
+  $text-color-light:  hsl($hue, 15%, 80%);
+  $text-color-richer: hsl($hue, 50%, 99%);
+  $text-color-highlight: hsl($accent-hue, 70%, 45%);
+  $link-color: hsl($hue, 90%, 70%);
+  $accent-color: hsl($accent-hue, 100%, 70%);
+  $error-color: rgb(240, 50, 50);
+  $button-background: hsl($hue, 63%, 43%);
+  $button-text-color: black;
+  $background: hsl($hue, 20%, 20%);
+
+$base03:    hsl($hue, 11, 0);
+$base02:    hsl($hue, 11, 13);
+$base01:    hsl($hue, 11, 24);
+$base00:    hsl($hue, 11, 39);
+$base0:     hsl($hue, 11, 54);
+$base1:     hsl(44, 11, 80);
+$base2:     hsl(44, 11, 89);
+$base3:     hsl(44, 11, 98);
+$yellow:    hsl(45, 100, 35);
+$orange:    hsl(25, 90, 40);
+$red:       hsl(0, 70, 50);
+$magenta:   hsl(331, 60, 50);
+$violet:    hsl(237,45,60);
+$blue:      hsl(205, 80, 80);
+$cyan:      hsl(175,70,60);
+$green:     hsl(70, 100, 60);
+
+.dark {
+  background: $base01;
+  color: $base2;
+  h4 { color: lighten($orange, 30%); }
+  textarea { background: $base01; color: $base3 }
+  nav, aside, header { background: $base02; }
+  footer { background: black; }
+  .Binder li+li {
+    border-top: 1px solid $base01;
+  }
+}
+.light {
+  background: $base3;
+  color: $base03;
+  h4 { color: darken($orange, 20%); }
+  textarea { background: $base3; }
+  nav, aside, header { background: $base2; }
+  footer { background: $base03; color: $base3; }
+  .Binder li+li {
+    border-top: 1px solid $base1;
+  }
+}

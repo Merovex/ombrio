@@ -1,9 +1,0 @@
-.Editor {
-  margin-left: 300px;
-  margin-right: 300px;
-  height: calc(100vh - 160px);
-}
-.Editor textarea {
-  width: 100%;
-  height: 100%;
-}

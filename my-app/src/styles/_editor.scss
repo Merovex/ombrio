@@ -1,0 +1,16 @@
+.Editor {
+  margin-left: 300px;
+  margin-right: 300px;
+  height: calc(100vh - 140px);
+}
+.Editor textarea {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  min-width: 350px;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.62;
+  resize: none;
+}

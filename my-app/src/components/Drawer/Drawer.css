@@ -1,9 +1,0 @@
-.Drawer {
-  /* display: none; */
-  position: fixed;
-  top: 60px;
-  right: 0;
-  bottom: 30px;
-  width: 280px;
-  z-index: 1000;
-}
