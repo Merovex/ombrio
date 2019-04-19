@@ -4,6 +4,26 @@ aside, nav {
   top: 0;
   bottom: 30px;
   z-index: 1000;
+  h4 {
+    margin-left: 1em;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 1em;
+    width: 95%;
+    list-style-type: none;
+    li {
+      padding: 6px 6px 6px 0.5em;
+    }
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 0;
+    line-height: 1.6;
+  }
 }
 .Drawer {
   right: 0;
@@ -12,20 +32,6 @@ aside, nav {
 .Binder {
   width: 280px;
   left: 0;
-  top: 0;
-}
-.Binder h4, .Drawer h4 {
-  margin-left: 1em;
-  font-size: 1.0rem;
-  text-transform: uppercase;
-}
-.Binder ul {
-  padding-left: 1em;
-  width: 95%;
-  list-style-type: none;
-}
-.Binder li {
-  padding: 6px 6px 6px 0.5em;
 }
 
 .BinderList {
@@ -38,14 +44,7 @@ aside, nav {
 
 .BinderLogo {
   position: absolute;
-  text-transform: uppercase;
   top: 0;
   height: 40px;
   width: 100%;
-}
-.BinderLogo h2 {
-  font-size: 14px;
-  text-align: center;
-  padding: 8px 0;
-  line-height: 1.6;
 }

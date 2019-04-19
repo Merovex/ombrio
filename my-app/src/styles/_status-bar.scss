@@ -5,6 +5,15 @@ footer {
   height: 30px;
   font-size: 12px;
   padding: 6px 1em 6px 1em;
+  display: flex;
+  flex-direction: row;
+  span {
+    margin-right: 1em;
+  }
+  div {
+    width: 20%;
+    float: left;
+  }
 }
 footer h4 {
   margin-top: 0;

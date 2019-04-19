@@ -1,7 +1,15 @@
 .Editor {
   margin-left: 300px;
   margin-right: 300px;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 180px);
+}
+.Editor input {
+  margin: 0 auto 0.2em auto;
+  display: block;
+  min-width: 350px;
+  max-width: 800px;
+  width: 100%;
+  font-size: 2rem;
 }
 .Editor textarea {
   margin: 0 auto;

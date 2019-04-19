@@ -4,7 +4,8 @@ class Editor extends Component {
   render() {
     return (
       <article className="Editor">
-        <textarea />
+        <input placeholder="Section Title" />
+        <textarea placeholder="Content" />
       </article>
     );
   }
