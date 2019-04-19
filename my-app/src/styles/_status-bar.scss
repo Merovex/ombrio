@@ -8,7 +8,10 @@ footer {
   display: flex;
   flex-direction: row;
   span {
-    margin-right: 1em;
+    margin: 0 0.7em;
+  }
+  svg {
+    margin: 0 0.5em;
   }
   div {
     width: 20%;

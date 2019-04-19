@@ -11,8 +11,8 @@ class SessionProgress extends Component {
     return (
       <div>
         <span>Session:</span>
-        <span>{time}&nbsp;<FontAwesomeIcon icon={faClock} /></span>
-        <span>{wph} wph&nbsp;<FontAwesomeIcon icon={faTachometerAltFast} /></span>
+        <span>{time}<FontAwesomeIcon icon={faClock} /></span>
+        <span>{wph} wph<FontAwesomeIcon icon={faTachometerAltFast} /></span>
       </div>
     );
   }

@@ -10,7 +10,7 @@ class SaveStatus extends Component {
     var icon = <FontAwesomeIcon icon={faSave} />;
     return (
       <span class='save'>
-        {icon}&nbsp;
+        {icon}
         {word}
       </span>
     );

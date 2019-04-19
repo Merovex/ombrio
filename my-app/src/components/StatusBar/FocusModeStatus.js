@@ -10,7 +10,7 @@ class FocusModeStatus extends Component {
     var icon = <FontAwesomeIcon icon={faExpandWide} />;
     return (
       <span class='save'>
-        {icon}&nbsp;
+        {icon}
         {word}
       </span>
     );

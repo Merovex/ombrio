@@ -1,13 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faExpandWide,
-  faCompress,
-  faSave,
-  faClock,
-  faSatelliteDish,
-  faTachometerAltFast
-} from '@fortawesome/pro-solid-svg-icons';
 import WordCount from './WordCount';
 import SaveStatus from './SaveStatus';
 import FocusModeStatus from './FocusModeStatus';
