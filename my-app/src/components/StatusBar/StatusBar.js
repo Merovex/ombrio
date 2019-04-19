@@ -7,36 +7,25 @@ import {
   faClock,
   faSatelliteDish,
   faTachometerAltFast
-} from '@fortawesome/pro-solid-svg-icons'
+} from '@fortawesome/pro-solid-svg-icons';
+import WordCount from './WordCount';
+import SaveStatus from './SaveStatus';
+import FocusModeStatus from './FocusModeStatus';
+import SessionProgress from './SessionProgress';
 
 class StatusBar extends Component {
   render() {
     return (
         <footer>
-          <div>
-            <span class='wordcount'>123 / 298765 words</span>
-            <span class='pages'>1 / 300 pages</span>
-          </div>
-          <div>Session:&nbsp;
-            <span><FontAwesomeIcon icon={faClock} />&nbsp;00:50</span>
-            <span><FontAwesomeIcon icon={faTachometerAltFast} />&nbsp;00&nbsp;wph</span>
-          </div>
+          <WordCount />
+          <SessionProgress />
           <div>&nbsp;</div>
           <div>
-            <span class='focus align-right'>
-              <FontAwesomeIcon icon={faExpandWide} />&nbsp;
-              Focus&nbsp;
-              <FontAwesomeIcon icon={faCompress} />&nbsp;
-              Compress
-            </span>
+            &nbsp;
           </div>
           <div className='align-right'>
-            <span class='save'>
-              <FontAwesomeIcon icon={faSatelliteDish} />&nbsp;
-              Saving&nbsp;
-              <FontAwesomeIcon icon={faSave} />&nbsp;
-              Saved
-            </span>
+            <FocusModeStatus />
+            <SaveStatus />
           </div>
         </footer>
     );
