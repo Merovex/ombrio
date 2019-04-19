@@ -22,14 +22,14 @@ $base1:     hsl($hue, 11, 80);
 $base2:     hsl($hue, 11, 92);
 $base3:     hsl($hue, 11, 97);
 $white:     #FFF;
-$yellow:    hsl(45, 100, 35);
+$yellow:    hsl(55, 100, 50);
 $orange:    hsl(25, 90, 40);
 $red:       hsl(0, 70, 50);
 $magenta:   hsl(331, 60, 50);
 $violet:    hsl(237,45,60);
 $blue:      hsl(205, 80, 80);
 $cyan:      hsl(175,70,60);
-$green:     hsl(70, 100, 60);
+$green:     hsl(90, 100, 60);
 
 .App {
   background: $base2;
@@ -42,6 +42,14 @@ $green:     hsl(70, 100, 60);
   footer { background: $white; color: $base03; border-top: 1px solid $base2;}
   .Binder li+li {
     border-top: 1px solid $base1;
+  }
+  ::selection {
+    background: $yellow; /* WebKit/Blink Browsers */
+    color: #000;
+  }
+  ::-moz-selection {
+    background: $yellow; /* Gecko Browsers */
+    color: #000;
   }
 }
 .dark {
