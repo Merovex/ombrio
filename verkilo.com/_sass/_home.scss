@@ -1,0 +1,33 @@
+#home {
+  h2 {
+    @extend .display-4;
+  }
+  .feature.card {
+      background: map-get($theme-colors, "card-white");
+      border: none;
+      width: 20em;
+      margin-left: 20px;
+      height: 450px;
+      padding-left: 20px;
+      .card-footer {
+        background: map-get($theme-colors, "card-white");
+      }
+      &:after {
+        content: "";
+        border-top: 225px solid transparent;
+        border-bottom: 225px solid transparent;
+        border-left: 20px solid map-get($theme-colors, "card-white");
+        position: absolute; right: -20px; top: 0;
+      }
+      &:before {
+        content: "";
+      	border-top: 225px solid transparent;
+      	border-bottom: 225px solid transparent;
+      	border-left: 20px solid map-get($theme-colors, "secondary-bg");
+      	position: absolute; left: 0; top: 0;
+      }
+  }
+  section {
+    padding: 0.5in 0;
+  }
+}

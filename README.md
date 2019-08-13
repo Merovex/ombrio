@@ -1,4 +1,4 @@
-# Ombrio
+# Verkilo
 
 **Full-Stack Toolchain for Professional Self-Publishers**
 
