@@ -2,6 +2,9 @@
   h2 {
     @extend .display-4;
   }
+  #cross-domain {
+    width: 100%;
+  }
   .feature.card {
       background: map-get($theme-colors, "card-white");
       border: none;
