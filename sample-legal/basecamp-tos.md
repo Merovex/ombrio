@@ -1,8 +1,8 @@
-# Basecamp Terms of Service
+# Verkilo Terms of Service
 
-By using the Basecamp ("Service"), you are agreeing to be bound by the following terms and conditions ("Terms of Service").
+By using the Verkilo ("Service"), you are agreeing to be bound by the following terms and conditions ("Terms of Service").
 
-Basecamp, LLC ("Company") reserves the right to update and change these Terms of Service without notice.
+Verkilo, LLC ("Company") reserves the right to update and change these Terms of Service without notice.
 
 Violation of any of the terms below may result in the termination of your account.
 
@@ -48,7 +48,7 @@ Customers may access their Service data via the Application Program Interface ("
 1. All content posted on the Service must comply with U.S. copyright law.
 2. We claim no intellectual property rights over the material you provide to the Service. All materials uploaded remain yours.
 3. The Company does not pre-screen content, but reserves the right (but not the obligation) in their sole discretion to refuse or remove any content that is available via the Service.
-4. The look and feel of the Service is copyright© Basecamp, LLC. All rights reserved. You may not duplicate, copy, or reuse any portion of the HTML, CSS, JavaScript, or visual design elements without express written permission from the Company.
+4. The look and feel of the Service is copyright © Verkilo, LLC. All rights reserved. You may not duplicate, copy, or reuse any portion of the HTML, CSS, JavaScript, or visual design elements without express written permission from the Company.
 
 ## General Conditions
 
@@ -65,6 +65,6 @@ Customers may access their Service data via the Application Program Interface ("
 11. The Company does not warrant that (i) the service will meet your specific requirements, (ii) the service will be uninterrupted, timely, secure, or error-free, (iii) the results that may be obtained from the use of the service will be accurate or reliable, (iv) the quality of any products, services, information, or other material purchased or obtained by you through the service will meet your expectations, and (v) any errors in the Service will be corrected.
 12. You expressly understand and agree that the Company shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses (even if the Company has been advised of the possibility of such damages), resulting from: (i) the use or the inability to use the service; (ii) the cost of procurement of substitute goods and services resulting from any goods, data, information or services purchased or obtained or messages received or transactions entered into through or from the service; (iii) unauthorized access to or alteration of your transmissions or data; (iv) statements or conduct of any third party on the service; (v) or any other matter relating to the service.
 13. The failure of the Company to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitutes the entire agreement between you and the Company and govern your use of the Service, superceding any prior agreements between you and the Company (including, but not limited to, any prior versions of the Terms of Service).
-14. Questions about the Terms of Service should be sent to [support@basecamp.com](mailto:support@basecamp.com).
+14. Questions about the Terms of Service should be sent to [support@verkilo.com](mailto:support@verkilo.com).
 
 Any new features that augment or enhance the current Service, including the release of new tools and resources, shall be subject to the Terms of Service. Continued use of the Service after any such changes shall constitute your consent to such changes.
