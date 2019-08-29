@@ -37,6 +37,7 @@
 * [DraftJS](https://draftjs.org/) if using React [this](https://jpuri.github.io/react-draft-wysiwyg/#/)
 * [Quill for Angular BSD](https://github.com/KillerCodeMonkey/ngx-quill)
 * [Concurrent editor in React](https://medium.com/@ethanryan/making-a-simple-real-time-collaboration-app-with-react-node-express-and-yjs-a261597fdd44) [this](https://hackernoon.com/building-conclave-a-decentralized-real-time-collaborative-text-editor-a6ab438fe79f)
+* [Ace Editor](https://github.com/securingsincity/react-ace)
 
 ### Desktop / Electron
 
@@ -45,6 +46,9 @@
 * [PhotonKit (outdated)](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
 * [Awesome Electron](https://github.com/sindresorhus/awesome-electron) for links to cool things with Electron.
 * [7 Famous Desktop Apps Using Electron JS Framework](https://brainhub.eu/blog/electron-framework-example-apps/)
+* [React Native Desktop](https://github.com/status-im/react-native-desktop)
+* [Electron Desktop "Tutorial"](https://www.youtube.com/watch?v=CmsA5CfQNN8)
+* [Someone who did a Todo app in React / Electron](https://www.reddit.com/r/reactjs/comments/cl8wyu/made_my_first_desktop_app_using_electron_and/)
 
 ### PouchDB and CouchDB
 
