@@ -16,6 +16,7 @@
 * [Learn Modern Javascript (Build & Test Real Apps Now)](https://www.udemy.com/modern-javascript-from-the-beginning/)
 * [Beginning Modern JavaScript (Includes 10 Real Projects)](https://www.udemy.com/modern-javascript-from-the-beginning/)
 * [React Front To Back, Traversy](https://www.udemy.com/react-front-to-back/)
+* [Advanced React & Redux](https://www.udemy.com/course/react-redux-tutorial/) He walks through the process with testing, etc.
 
 ## Plugins
 
@@ -41,6 +42,7 @@
 
 ### Desktop / Electron
 
+* [NPM Trends, Electron & React Native hands down](https://www.npmtrends.com/react-desktop-vs-electron-vs-electron-forge-vs-electron-compile-vs-electron-packager-vs-react-native)
 * [Most Popular Technology Stack To Choose From: Full Stack Vs. MEAN Stack Vs. MERN Stack In 2019](https://hackernoon.com/most-popular-technology-stack-to-choose-from-full-stack-vs-mean-stack-vs-mern-stack-in-2019-d12c0a17439a)
 * [Electron Forge w/ React](https://electronforge.io/templates)
 * [PhotonKit (outdated)](http://photonkit.com/) for Electron (look & Feel) check out [this](https://discuss.atom.io/t/what-framework-you-are-using-to-style-your-electron-app/60199/2) for CSS Frameworks with Electron
@@ -48,7 +50,9 @@
 * [7 Famous Desktop Apps Using Electron JS Framework](https://brainhub.eu/blog/electron-framework-example-apps/)
 * [React Native Desktop](https://github.com/status-im/react-native-desktop)
 * [Electron Desktop "Tutorial"](https://www.youtube.com/watch?v=CmsA5CfQNN8)
-* [Someone who did a Todo app in React / Electron](https://www.reddit.com/r/reactjs/comments/cl8wyu/made_my_first_desktop_app_using_electron_and/)
+* [Reddit: Someone who did a Todo app in React / Electron](https://www.reddit.com/r/reactjs/comments/cl8wyu/made_my_first_desktop_app_using_electron_and/)
+* [Reddit: Project using Electron and React-Native](https://www.reddit.com/r/reactjs/comments/a1pue3/buttercup_free_opensource_password_manager_built/) [repo](https://github.com/buttercup/buttercup-desktop)
+* [Create Electron with CRA](https://www.freecodecamp.org/news/building-an-electron-application-with-create-react-app-97945861647c/) [repo](https://github.com/csepulv/electron-with-create-react-app)
 
 ### PouchDB and CouchDB
 
