@@ -16,7 +16,7 @@
 * [Learn Modern Javascript (Build & Test Real Apps Now)](https://www.udemy.com/modern-javascript-from-the-beginning/)
 * [Beginning Modern JavaScript (Includes 10 Real Projects)](https://www.udemy.com/modern-javascript-from-the-beginning/)
 * [React Front To Back, Traversy](https://www.udemy.com/react-front-to-back/)
-* [Advanced React & Redux](https://www.udemy.com/course/react-redux-tutorial/) He walks through the process with testing, etc.
+* [Advanced React & Redux](https://www.udemy.com/course/react-redux-tutorial/) He walks through the process with testing, etc. ![](https://img.shields.io/static/v1?label=todo&message=in-progress&color=red)
 
 ## Plugins
 
