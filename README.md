@@ -12,11 +12,11 @@
 
 ## Courses
 
-* ![](https://img.shields.io/static/v1?label=todo&message=not%20started&color=blueviolet)[React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/lecture/8268510)
-* ![](https://img.shields.io/static/v1?label=todo&message=not%20started&color=blueviolet)[Learn Modern Javascript (Build & Test Real Apps Now)](https://www.udemy.com/modern-javascript-from-the-beginning/)
-* ![](https://img.shields.io/static/v1?label=todo&message=not%20started&color=blueviolet)[Beginning Modern JavaScript (Includes 10 Real Projects)](https://www.udemy.com/modern-javascript-from-the-beginning/)
-* ![](https://img.shields.io/static/v1?label=todo&message=not%20started&color=blueviolet)[React Front To Back, Traversy](https://www.udemy.com/react-front-to-back/)
 * ![](https://img.shields.io/static/v1?label=todo&message=in-progress&color=green) [Advanced React & Redux](https://www.udemy.com/course/react-redux-tutorial/) He walks through the process with testing, etc.
+* ![](https://img.shields.io/static/v1?label=todo&message=not%20started&color=blueviolet) [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/learn/lecture/8268510)
+* ![](https://img.shields.io/static/v1?label=todo&message=not%20purchased&color=grey) [Learn Modern Javascript (Build & Test Real Apps Now)](https://www.udemy.com/modern-javascript-from-the-beginning/)
+* ![](https://img.shields.io/static/v1?label=todo&message=not%20purchased&color=grey) [Beginning Modern JavaScript (Includes 10 Real Projects)](https://www.udemy.com/modern-javascript-from-the-beginning/)
+
 
 ## Plugins
 
