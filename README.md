@@ -29,6 +29,11 @@
 * [React Context API replacing Redux?](https://blog.bitsrc.io/react-context-api-a-replacement-for-redux-6e20790492b3)
 * [React Desktop](https://github.com/gabrielbull/react-desktop) - React UI Components for macOS High Sierra and Windows 10
 
+### Redux
+
+* **[Redux Starter Kit](https://redux-starter-kit.js.org/)** by the creator
+* [Document your code automatically like in CSIL](https://react-styleguidist.js.org/)
+
 ### Database
 * [Building an offline-first app with React and RxDB](https://blog.logrocket.com/building-an-offline-first-app-with-react-and-rxdb-e97a1fa64356)
 * [rxdb](https://github.com/pubkey/rxdb) - A realtime Database for the Web
@@ -49,10 +54,11 @@
 * [Awesome Electron](https://github.com/sindresorhus/awesome-electron) for links to cool things with Electron.
 * [7 Famous Desktop Apps Using Electron JS Framework](https://brainhub.eu/blog/electron-framework-example-apps/)
 * [React Native Desktop](https://github.com/status-im/react-native-desktop)
-* [Electron Desktop "Tutorial"](https://www.youtube.com/watch?v=CmsA5CfQNN8)
-* [Reddit: Someone who did a Todo app in React / Electron](https://www.reddit.com/r/reactjs/comments/cl8wyu/made_my_first_desktop_app_using_electron_and/)
-* [Reddit: Project using Electron and React-Native](https://www.reddit.com/r/reactjs/comments/a1pue3/buttercup_free_opensource_password_manager_built/) [repo](https://github.com/buttercup/buttercup-desktop)
+* [YT: Electron Desktop "Tutorial"](https://www.youtube.com/watch?v=CmsA5CfQNN8)
+* [Reddit: Someone who did a Todo app in React / Electron](https://www.reddit.com/r/reactjs/comments/cl8wyu/made_my_first_desktop_app_using_electron_and/) [repo](https://github.com/karlhadwen/todoist) [his channel](https://www.youtube.com/channel/UC1DUQiZduv_yNZy0O7n_iHA)
+* [Reddit: Project using Electron and React-Native](https://www.reddit.com/r/reactjs/comments/a1pue3/buttercup_free_opensource_password_manager_built/) [repo](https://github.com/buttercup/buttercup-desktop) **[Speed Coding Tinder (helpful for framework)](https://www.youtube.com/watch?v=wLGM04oi_wE)**
 * [Create Electron with CRA](https://www.freecodecamp.org/news/building-an-electron-application-with-create-react-app-97945861647c/) [repo](https://github.com/csepulv/electron-with-create-react-app)
+* [React Date Picker](https://airbnb.io/react-dates/?path=/story/daterangepicker-drp--default)
 
 ### PouchDB and CouchDB
 
