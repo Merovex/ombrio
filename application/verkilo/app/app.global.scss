@@ -39,7 +39,6 @@ body {
     article,
     aside,
     footer {
-      transition: 4s;
       color: #ddd;
       background: #383838;
       border-color: rgba(#fff, 0.2);
@@ -174,6 +173,8 @@ body {
       min-height: calc(100% - 3em);
       overflow-y: hidden;
       width: 80%;
+      max-width: 55em;
+      min-width: 30em;
       textarea {
         padding: 1em 0.5in;
         width: calc(99.5% - 1in);
@@ -195,6 +196,9 @@ body {
     grid-area: footer;
     border-top: 1px solid rgba(#000, 0.2);
     display: table;
+    form {
+      display: inline-block;
+    }
     div {
       vertical-align: middle;
       display: table-cell;

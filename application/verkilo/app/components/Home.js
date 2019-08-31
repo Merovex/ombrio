@@ -1,17 +1,26 @@
 // @flow
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 // import routes from '../constants/routes';
 // import styles from './Home.scss';
 
 export default class Home extends Component {
+  state = { darkmode: "" };
+
+  toggleTheme = ( event ) => {
+    this.setState({
+      darkmode: !this.state.darkmode
+    })
+  };
+
   render() {
+    const darkmode = this.state.darkmode ? 'dark' : 'light';
     return (
-      <div className="dark" data-tid="container">
+      <div className={`${darkmode}`} data-tid="container">
         <nav>
           <div>
             <ul>
-              <li>here</li>
+              <li>{this.state.darkmode}</li>
               <li>View / Group Mode</li>
               <li>Compile</li>
             </ul>
@@ -55,6 +64,9 @@ export default class Home extends Component {
                   <li>Page Title</li>
                   <li>Page Title</li>
                   <li>Page Title</li>
+                  </ul>
+                  <h4>Research</h4>
+                  <ul>
                     <li>Page Title</li>
                     <li>Page Title</li>
                     <li>Page Title</li>
@@ -125,10 +137,12 @@ export default class Home extends Component {
         <footer>
           <div>
             Dark Mode
-            <label className="switch">
-              <input type="checkbox" />
-              <span className="slider round" />
-            </label>
+            <form onChange={this.toggleTheme}>
+              <label className="switch">
+                <input type="checkbox" />
+                <span className="slider round" />
+              </label>
+            </form>
           </div>
           <div className="wordcounts">
             <span className="section">1,500</span> /
