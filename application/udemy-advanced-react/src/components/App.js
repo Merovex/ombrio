@@ -6,6 +6,12 @@ import CommentList from 'components/CommentList';
 import * as actions from 'actions';
 
  class App extends Component {
+  renderPostCommentLink() {
+    if(this.props.auth){
+      return(<li><Link to='/post'>Post a Comment</Link></li>);
+    }
+    return("");
+  }
   renderButton() {
     if(this.props.auth){
       return (
@@ -23,7 +29,7 @@ import * as actions from 'actions';
       <div>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/post">Post a Comment</Link></li>
+          {this.renderPostCommentLink()}
           <li>{this.renderButton()}</li>
         </ul>
       </div>
