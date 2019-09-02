@@ -1,0 +1,95 @@
+$metadata-width: calc(100% - 1.5em);
+aside {
+  height: calc(100vh - 90px);
+  overflow: hidden;
+  h4 { text-align: center; }
+  h4, h5 { margin: 0; }
+  table {
+    font-size: 0.9em;
+    th {
+      text-align: right;
+    }
+  }
+  transition: 0.2s;
+  .thing {
+    height: calc(100% - 60px);
+    max-height: calc(100% - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0.5em;
+    margin: 0;
+  }
+  .footer {
+    vertical-align: middle;
+    display: table;
+    height: 60px;
+    width: 99%;
+    margin: 0;
+    button {
+      margin: 10px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+  &.hide {
+    width: 50px !important;
+    transition: 0.2s;
+  }
+}
+.binder {
+  grid-area: binder;
+  border: none;
+  border-right: 1px solid rgba(#000, 0.2);
+  white-space: nowrap;
+  ul {
+    // border: 1px solid red;
+    padding-left: 1em;
+    list-style-type: none;
+    li {
+      input {
+        width: 95%;
+      }
+    }
+  }
+  .footer {
+    border-color: orange;
+    text-align: right;
+  }
+}
+.metadata {
+  justify-self: end;
+  border-left: 1px solid rgba(#000, 0.2);
+  grid-area: meta;
+  .label {
+    border-radius: 0.4em;
+    background: #de1e7e;
+    border: 1px solid darken(#de1e7e, 10%);
+    color: #fff;
+    padding: 0.2em;
+    margin: 0.5em 0;
+    font-size: 0.9em;
+    font-weight: bolder;
+  }
+  input {
+    width: $metadata-width;
+  }
+  div {
+    // margin-bottom: 1em;
+  }
+  textarea {
+    width: $metadata-width;
+    min-height: 8em;
+    resize: vertical;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0.3em 0;
+      padding: 0 0 0 0.5em;
+    }
+  }
+}
