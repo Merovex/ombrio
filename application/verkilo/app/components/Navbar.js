@@ -4,7 +4,7 @@ export default class NavBar extends Component {
 
   render() {
     return (
-      <nav>
+      <header className='ribbon'>
         <div>
           <ul>
             <li>Home</li>
@@ -15,7 +15,7 @@ export default class NavBar extends Component {
         <div className="search">
           Search: <input type='text' />
         </div>
-      </nav>
+      </header>
     );
   }
 }

@@ -1,0 +1,37 @@
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 20em auto 20em;
+  grid-template-rows: 2em auto;
+  height: calc(100vh - 90px);
+  grid-template-areas:
+    'binder header meta'
+    'binder article meta';
+  background: #eee;
+
+  article {
+    grid-area: article;
+    background: #fff;
+    margin: 0 auto 1em auto;
+    border: 1px solid rgba(#000, 0.3);
+    box-shadow: 4px 4px 4px rgba(#000, 0.2);
+    height: calc(100% - 3em);
+    min-height: calc(100% - 3em);
+    overflow-y: hidden;
+    width: 80%;
+    max-width: 55em;
+    min-width: 30em;
+    textarea {
+      padding: 1em 0.5in;
+      width: calc(99.5% - 1in);
+      height: calc(99.5% - 2em);
+      margin: 0 auto;
+      overflow-y: auto;
+      border: none;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      resize: none;
+    }
+  }
+}
