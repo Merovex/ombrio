@@ -1,0 +1,33 @@
+article {
+  display: flex;
+  height: 100%;
+  overflow-y: hidden;
+  flex: 18 0px;
+  aside {
+    flex: 6;
+  }
+  section.editor {
+    box-shadow: 4px 4px 4px rgba(#000, 0.2);
+    max-width: 55em;
+    height: 93%;
+    background: #fff;
+    margin: 0.25in;
+    border: 1px solid rgba(#000, 0.3);
+    h4 {
+      margin: 0;
+    }
+    textarea {
+
+      padding: 1em 0.5in;
+      width: 80%;
+      height: calc(90% - 0.5in);
+      margin: 0 auto;
+      margin: 0.25in;
+      overflow-y: auto;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      resize: none;
+    }
+  }
+}

@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     // const dark_theme = this.state.dark_theme ? 'dark' : 'light';
     return (
-      <footer>
+      <footer className='site-footer'>
         <div>
           Dark Mode
           <form onChange={this.props.toggleDarkTheme}>
