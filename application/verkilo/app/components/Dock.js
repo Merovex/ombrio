@@ -3,13 +3,20 @@ import React, { Component } from 'react';
 export default class Dock extends Component {
   constructor(props){
     super(props);
-    this.className='tray';
     this.toggleVisibility = this.toggleVisibility.bind(this);
+    this.getClassName = this.getClassName.bind(this);
+    this.getButtonClassName = this.getButtonClassName.bind(this);
   }
-  state = { visible: true };
+  state = { opened: true };
   toggleVisibility = ( event ) => {
     this.setState({
-      visible: !this.state.visible
+      opened: !this.state.opened
     })
   };
+  getClassName = () => {
+    return (((this.state.opened) ? "dock" : "dock closed") );
+  }
+  getButtonClassName = (o="fa-angle-right",c="fa-angle-left") => {
+    return( "fas " + (this.state.opened ? o : c) );
+  }
 }
