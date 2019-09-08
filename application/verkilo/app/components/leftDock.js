@@ -5,7 +5,6 @@ export default class LeftDock extends Dock {
   constructor(props){
     super(props);
   }
-  // <input type="text" value="Page Title" />
   render() {
     return (
       <aside className={this.getClassName()}>

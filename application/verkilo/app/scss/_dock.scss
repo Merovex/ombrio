@@ -23,20 +23,24 @@ aside.dock {
     }
   }
   footer {
-    width: 90%;
-    padding: 8px;
+    width: 100%;
     text-align: right;
     button.toggle {
       font-size: 30px;
       border-radius: 50%;
       height: 40px;
       width: 40px;
+      margin: 8px;
     }
   }
   &.closed {
     max-width: 60px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+    footer {
+      width: 100%;
+      text-align: center !important;
+    }
   }
 }
 article aside {

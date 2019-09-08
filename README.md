@@ -23,6 +23,12 @@
 
 * Use Electron for desktop because gives access to the filesystem.
 * [Reusable JS components](https://github.com/teambit/bit)
+* [React Native Elements](https://react-native-training.github.io/react-native-elements/)
+* [Docusaurus](https://docusaurus.io/)
+* [React Native Web](https://github.com/necolas/react-native-web) Which should let us use React Native for Electron. Compare with [React Native Electron](https://github.com/PaulLeCam/react-native-electron/) [this](https://github.com/necolas/react-native-web/issues/1148)
+* **Actually, looks like React Native alone for both mobile and Desktop.**
+* [Editor, again](https://medium.com/better-programming/lets-build-a-customizable-rich-text-editor-with-slate-and-react-beefd5d441f2)
+* **USE [SlateJS](https://docs.slatejs.org/)**
 
 ### React
 

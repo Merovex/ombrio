@@ -16,7 +16,7 @@ export default class Dock extends Component {
   getClassName = () => {
     return (((this.state.opened) ? "dock" : "dock closed") );
   }
-  getButtonClassName = (o="fa-angle-right",c="fa-angle-left") => {
+  getButtonClassName = (o="fa-angle-left",c="fa-angle-right") => {
     return( "fas " + (this.state.opened ? o : c) );
   }
 }
