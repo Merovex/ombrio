@@ -11,13 +11,13 @@ article {
     max-width: 55em;
     height: 93%;
     background: #fff;
-    margin: 0.25in;
+    margin: 0.25in auto;
     border: 1px solid rgba(#000, 0.3);
+    flex: 16;
     h4 {
       margin: 0;
     }
     textarea {
-
       padding: 1em 0.5in;
       width: 80%;
       height: calc(90% - 0.5in);

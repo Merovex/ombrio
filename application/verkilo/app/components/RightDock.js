@@ -42,7 +42,7 @@ export default class RightDock extends Dock {
         </section>
         <footer>
           <button className='toggle' onClick={this.toggleVisibility}>
-            <i className={ this.getButtonClassName("fa-angle-left","fa-angle-right") }></i>
+            <i className={ this.getButtonClassName("fa-angle-right","fa-angle-left") }></i>
           </button>
         </footer>
       </aside>
