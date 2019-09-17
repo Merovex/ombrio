@@ -9,12 +9,29 @@
     - Projects, Archived Projects, Labels, Filters
     - Clicking into a Project changes Binder
 * Projects
-  - Allow nesting of projects
-  - Allow sharing of projects
+  - Nesting
+    - Compile from Project Down (allows boxed sets)
+  - Sharing
+  - Archival (tagged & hidden from default view)
+  - View by Shared / Sharing projects
 * Project
-  - Readme page
-  - Manuscript section
-  - Research / Docs section 
+  - Readme page (Metadata)
+    - Status: (Ideation, Planning, Drafting, Editing, Published)
+    - Genre tags (syncing genre with Amazon?)
+    - Versions: ISBN & Release Date
+  - Sections: ()
+    - Manuscript - The part of the document that is compiled
+    - Frontmatter
+    - Backmatter
+    - Research / Docs
+    - Inbox
+    - Trash
+  - Version History
+* "File"
+  - Split at selection
+  - Metadata
+  - Body
+  - Notes
 * Right-side file metadata
 * Center editor
   - SlateJS
