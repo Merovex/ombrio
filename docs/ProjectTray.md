@@ -14,7 +14,9 @@ When looking at the list of projects / books, we can organize the books.
 
 * Renaming Project Notebook is in the Project Metadata
 
-### List View
+### Account Tree View
+
+* Use React Sortable Tree, 6 as Max Depth (H6)
 
 * Account
   - Project A
@@ -28,12 +30,16 @@ When looking at the list of projects / books, we can organize the books.
       - Project C.2
       - Project C.3
 
-## Project View
+## Project Tree View
 
-
+[Awesome React Native page](https://github.com/jondot/awesome-react-native)
 
 * Project
-  - Overview
+  - Overview / Details
+    - Compile Button
+    - Metadata
+    - Formatting
+    - Copyright & ISBN
   - Manuscript
     - Section
     - Section

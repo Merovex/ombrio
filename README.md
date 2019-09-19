@@ -2,6 +2,11 @@
 
 **Full-Stack Toolchain for Professional Self-Publishers**
 
+## NPM Libraries
+
+* React Sortable Tree
+* SlateJS
+
 ## Features
 
 * Left-side Binder
