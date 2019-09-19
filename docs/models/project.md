@@ -1,6 +1,6 @@
 # Project Model
 
-## Project (Container)
+## Project
 ```
 {
   id: Number,
@@ -23,7 +23,7 @@
 }
 ```
 
-## Contributors
+## Contributor
 
 ```
 {
@@ -36,7 +36,7 @@
 }
 ```
 
-## Versions
+## Version
 
 ```
 {
