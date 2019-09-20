@@ -21,6 +21,7 @@
   - View by Shared / Sharing projects
 * Project
   - Readme page (Metadata)
+    - Change this now.
     - Status: (Ideation, Planning, Drafting, Editing, Published)
     - Genre tags (syncing genre with Amazon?)
     - Versions: ISBN & Release Date
