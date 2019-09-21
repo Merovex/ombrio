@@ -2,16 +2,24 @@
 
 https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/src/common/components/AppRender.js
 
-| File | Type | Comment |
-| --- | --- | --- |
-| Screen.js | View | Joins the Base to the Render |
-| ScreenRender.android.js | View | Calls ScreenRender.native.js|
-| ScreenRender.io.js | View | Calls ScreenRender.native.js|
-| ScreenRender.native.js | View | Provides code for Android & iOS.|
-| ScreenRender.js   | View | Web & Desktop  |
-| ScreenBase.js | Component | Provides the logic |
+## Entry Point
 
-## Screen
+* Separate `index.web.html` & `index.desktop.html`
+* `electron.js` for Electron bootstrap
+*
+
+## Application
+
+|          File           |      Type     |         Comment              |
+| ----------------------- | ------------- | ---------------------------- |
+| Screen.js               | Component-ish | Joins the Base to the Render |
+| ScreenBase.js           | Component     | Provides the logic           |
+| ScreenRender.android.js | View          | Calls ScreenRender.native.js |
+| ScreenRender.io.js      | View          | Calls ScreenRender.native.js |
+| ScreenRender.native.js  | View          | Provides code for Android & iOS.|
+| ScreenRender.js         | View          | Web & Desktop  |
+
+### Screen
 
 ```
 'use strict';
@@ -30,7 +38,7 @@ export default class Screen extends Base {
 }
 ```
 
-## Screen Render
+### Screen Render
 
 ```
 'use strict';
@@ -46,7 +54,7 @@ export default function (props, state) {
 }
 ```
 
-## ScreenRender Android / iOS
+### ScreenRender Android / iOS
 
 ```
 'use strict';
@@ -58,7 +66,7 @@ export default function () {
 }
 ```
 
-## Screen Render Native
+### Screen Render Native
 
 ```
 'use strict';
@@ -85,7 +93,7 @@ var styles = StyleSheet.create({
 });
 ```
 
-## Screen Base
+### Screen Base
 
 ```
 'use strict';
