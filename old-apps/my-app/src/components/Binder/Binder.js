@@ -1,3 +1,4 @@
+//@ts-check 
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/pro-solid-svg-icons'
