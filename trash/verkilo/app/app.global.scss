@@ -1,0 +1,30 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import 'scss/normalize';
+@import 'scss/theme';
+@import 'scss/slider';
+@import 'scss/ribbon';
+@import 'scss/main';
+@import 'scss/article';
+@import 'scss/dock';
+@import 'scss/footer';
+
+body {
+  position: relative;
+  height: 100vh;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  overflow-y: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    'ribbon'
+    'main'
+    'footer';
+}
