@@ -2,13 +2,11 @@ import React from 'react';
 import { Sidebar } from "./Sidebar";
 import { Binder } from "./Binder";
 import { Editor } from "./Editor";
-import { Footer } from "./Footer";
 
 export const Content = () => (
-  <section>
+  <main>
     <Sidebar />
     <Binder />
     <Editor />
-    <Footer />
-  </section>
+  </main>
 );

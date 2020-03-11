@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Editor = () => (
-  <section>
+  <section className='editor'>
     <p>I am an editor</p>
   </section>
 );

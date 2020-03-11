@@ -6,7 +6,7 @@ export const Header = () => {
     <header className="header" data-testid="header" >
       <nav>
         <div className="logo">
-          <img src="/images/logo.png" alt="Verkilo" ></img>
+          <img src="/images/verkilo-logo-full-1.png" alt="Verkilo" ></img>
         </div>
         <div className="settings">
           <ul>

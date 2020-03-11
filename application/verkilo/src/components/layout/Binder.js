@@ -2,15 +2,12 @@ import React from 'react';
 // import { Projects } from "../Projects";
 import { Sections } from "../Sections";
 
-
 export const Binder = () => (
   <section className='binder' data-testid='binder'>
-    <Sections />
-    <ul className='binder__generic'>
-      <li>Project A</li>
-      <li>Project B</li>
-      <li>Project C</li>
-    </ul>
+    <h2>Project Name</h2>
+    <h3>Manuscript</h3>
+    <Sections projectId={'21lMxW5WU1f3fGUVBcrc'} />
+    <h3>Research</h3>
   </section>
 );
 // B = Block
