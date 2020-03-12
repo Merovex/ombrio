@@ -13,6 +13,15 @@
     list-style-type: none;
     margin: 4px 4px 4px 0;
     padding: 4px;
+    border: 1px solid red;
+    display:flex;
+    justify-content: space-between;
+    span {
+      background-color: yellow;
+      cursor: pointer;
+      max-width: 85%;
+      overflow-x: hidden;
+    }
   }
   .binder__section {
     li {
