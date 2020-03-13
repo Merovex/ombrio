@@ -1,40 +1,24 @@
 
-import React from 'react';
-import {FaEllipsisH} from 'react-icons/fa';
+import React, { useState } from 'react';
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
+import { firebase } from "../firebase";
 
 export const BinderSectionItem = ({section}) => {
-  console.log(section)
-  const boing = sectionId => {
-    alert("HERE: {sectionId}")
+  const setSelectedSection = () => {
+
   }
-  const makeBinderSectionItemActive = sectionId => {
-    alert(sectionId)
+  const boing = sectionId => {
+    alert("boing:"+ sectionId)
+  }
+  const bing = sectionId => {
+    setSelectedSection(sectionId);
+    alert(`Bing:` + sectionId)
   }
   return (
     <li key={section.id}
-      onClick={() => makeBinderSectionItemActive(section.id)}
+      onClick={() => setSelectedSection(section.id) }
     >
-      <ContextMenuTrigger id='menu-{section.id}'>    
-        <span>{section.title}</span>
-      </ContextMenuTrigger>
-      <ContextMenu id="menu-{section.id}">
-      <MenuItem data={{foo: 'bar'}} onClick={() => boing(section.id)}>
-        rename
-      </MenuItem>
-      <MenuItem data={{foo: 'bar'}} onClick={() => boing(section.id)}>
-        trash
-      </MenuItem>
-    </ContextMenu>
+    <span>{section.isActive}//{section.id}//{section.title}</span>
     </li>
   );
 }
-/* <li key={section.id}
-              onClick={() => sectionOnClick(section.id) }
-              onContextmenu={() => sectionOnRightClick(section.id)}
-              className='binder__section'>
-            <ContextMenuTrigger id='section-{section.id}'>    
-              <span>{section.id}{section.id}</span>
-            </ContextMenuTrigger>
-            <FaEllipsisH />
-          </li> */

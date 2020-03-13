@@ -4,7 +4,7 @@ import {BinderSectionItem} from "./BinderSectionItem"
 
 export const Sections = ({projectId}) => {
   const timeout = 2500;
-  const [sectionPopup, setSectionPopup] = useState(false);
+  // const [sectionPopup, setSectionPopup] = useState(false);
 
   const {sections} = useSections(projectId)
   const sectionOnClick = sectionId => {
