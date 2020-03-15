@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import {useSections} from '../hooks';
-import {BinderSectionItem} from "./BinderSectionItem"
+import React, { useState, useEffect, useContext } from 'react';
+import { useSections, useSection } from '../hooks';
+import { EditorContext } from '../context/EditorContext';
 
 export const Sections = ({projectId}) => {
-  const timeout = 2500;
-  // const [sectionPopup, setSectionPopup] = useState(false);
-
   const {sections} = useSections(projectId)
-  const sectionOnClick = sectionId => {
-    alert(sectionId)
-  }
-  const sectionOnRightClick = sectionId => {
-    alert(sectionId)
+  const {setActiveSection} = useContext(EditorContext);
+  const setSelectedSection = sectionId => {
+    setActiveSection(sectionId)
   }
   return (
     <div className="projects" data-testid="projects">
       <ul className='sections__list' data-testid='sections'>
         {sections.map(section =>
-          <BinderSectionItem section={section} />
+          <li key={section.id}
+            onClick={() => setSelectedSection(section.id) }
+          >
+          <span>{section.isActive}//{section.id}//{section.title}</span>
+          </li>
         )}
       </ul>
     </div>
