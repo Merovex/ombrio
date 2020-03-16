@@ -5,22 +5,25 @@
   h2.section-title {
     margin: 10px auto;
     font-size: 20px;
-    width: 95%;
+    width: 100%;
+    padding: 0 20%;
   }
   div.page {
-    height: calc(100vh - 180px);
-    width: 50em;
+    height: calc(100vh - 150px);
+    min-width: 6in;
+    width: 100%;
     border: 1px solid var(--foreground);
     margin: 2em auto;
     textarea {
       color: var(--foreground);
+      outline: none;
+      // background: orange;
       line-height: 1.8;
       font-size: 18px;
-      padding: 2em;
       border: none;
-      width:  calc(100% - 4em);
+      width:  100%;
+      padding: 0 20%;
       height: calc(100% - 4em);
-      margin: 0 2em;
       font-family: "Source Serif Pro", Cambria, Cochin, Georgia, serif;
     }
   }
@@ -31,8 +34,9 @@
       border-radius: 3px;
       width: 100%;
       margin: 1em auto;
-      background: none;
-      color: $body-fg;
+      outline: none;
+      color: var(--foreground);
+      background: var(--background);
       height: 10em;
     }
   }

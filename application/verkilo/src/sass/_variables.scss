@@ -27,32 +27,32 @@ $light-background: $gray-900;
 $dark-background: $gray-200;
 
 @media (prefers-color-scheme: light) {
-:root {
-  --font-heading: Oswald,#{$system-fonts};
-  --font-monospace: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  --font-sans: "Source Sans Pro",#{$system-fonts};
-  --font-serif: "Source Serif Pro",#{$system-fonts};
-  --font-system: #{$system-fonts};
+  :root {
+    --font-heading: Oswald,#{$system-fonts};
+    --font-monospace: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    --font-sans: "Source Sans Pro",#{$system-fonts};
+    --font-serif: "Source Serif Pro",#{$system-fonts};
+    --font-system: #{$system-fonts};
 
-  --foreground: #{contrast($gray-500, $light-background,7)};
-  --gray: #{$gray-300};
-  --silver: #{$gray-700};
-  --mono-2: #{$gray-600};
-  --background: #{$gray-900};
-  --navbar-background: #{$gray-900};
-  --card-background: #{$gray-800};
-  --midnight: #{$gray-100};
-  --black: #{$gray-200};
-  --highlight: #{$gray-500};
-  --white: #{$gray-900};
-  --red: #{contrast(red, $light-background, 6)};
-  --green:  #{contrast($green, $light-background, 6)};
-  --orange: #{contrast($orange, $light-background, 6)};
-  --blue: #{contrast($blue, $light-background, 6)};
-  --purple: #{contrast($purple, $light-background, 6)};
-  --primary: #b5adff;
-  --button-text: #{$gray-900};
-}
+    --foreground: #{contrast($gray-500, $light-background,7)};
+    --gray: #{$gray-300};
+    --silver: #{$gray-700};
+    --mono-2: #{$gray-600};
+    --background: #{$gray-900};
+    --navbar-background: #{$gray-900};
+    --card-background: #{$gray-800};
+    --midnight: #{$gray-100};
+    --black: #{$gray-200};
+    --highlight: #{$gray-500};
+    --white: #{$gray-900};
+    --red: #{contrast(red, $light-background, 6)};
+    --green:  #{contrast($green, $light-background, 6)};
+    --orange: #{contrast($orange, $light-background, 6)};
+    --blue: #{contrast($blue, $light-background, 6)};
+    --purple: #{contrast($purple, $light-background, 6)};
+    --primary: #b5adff;
+    --button-text: #{$gray-900};
+  }
 }
 
 @media (prefers-color-scheme: dark) {
