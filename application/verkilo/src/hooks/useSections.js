@@ -25,7 +25,7 @@ export const useSections = selectedProject => {
 
     return () => unsubscribe();
 
-  }, [selectedProject, sections]);
+  }, [selectedProject]);
 
   return { sections, setSections };
 };
