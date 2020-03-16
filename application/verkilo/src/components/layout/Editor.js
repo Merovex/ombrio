@@ -4,14 +4,22 @@ import { EditorContext } from "../../context/EditorContext";
 import {firebase} from '../../firebase';
 
 export const Editor = () => {
-  const handleTextChange = (event) => {
-    console.log(section.docId)
-    const neusection = {...section, text: event.target.value}
-    setSection(neusection);
+  let timer = null
+  const saveOnIdle = () => {
+    console.log("I would save now");
+  }
+  const saveChanges = section => {
+    setSection(section);
     firebase.firestore()
       .collection('sections')
       .doc(section.docId)
-      .update(neusection);
+      .update(section);
+  }
+  const handleSynopsisChange = (event) => {
+    saveChanges({...section, synopsis: event.target.value})
+  }
+  const handleTextChange = (event) => {
+    saveChanges({...section, text: event.target.value})
   }
 
   const { activeSection } = useContext(EditorContext);
@@ -32,7 +40,10 @@ export const Editor = () => {
       </div>
       <aside>
         <h3>Synopsis</h3>
-        <textarea value={synopsis} />
+        <textarea
+          onChange={handleSynopsisChange}
+          placeholder="Loading text..."
+          value={synopsis} />
         <div>{wordcount}</div>
       </aside>
     </section>
