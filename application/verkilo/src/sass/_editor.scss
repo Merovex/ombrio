@@ -1,4 +1,5 @@
 .editor {
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   h2.section-title {
@@ -6,32 +7,42 @@
     font-size: 20px;
     width: 95%;
   }
-  div.form {
-    background: rgba(#00F,0.2);
-    height: 100%;
-    width: 95%;
+  div.page {
+    height: calc(100vh - 180px);
+    width: 50em;
+    border: 1px solid $body-fg;
+    margin: 2em auto;
     textarea {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      width: 40em;
-      height: calc(100% - 50px);
+      color: $body-fg;
       line-height: 1.8;
       font-size: 18px;
       padding: 2em;
-      border: 1px solid rgba(0,0,0,0.3);
-      box-sizing: border-box;
-      overflow-y: scroll;
-      resize: none;
+      border: none;
+      width:  calc(100% - 4em);
+      height: calc(100% - 4em);
+      margin: 0 2em;
       font-family: "Source Serif Pro", Cambria, Cochin, Georgia, serif;
     }
   }
   aside {
-    width: 450px;
+    max-width: 450px;
+    width: 25%;
     background: rgba(0,0,0,0.5);
+    padding: 0 1em;
+    // display: none;
     textarea {
-      width: 15em;
-      margin-right: auto; margin-left: auto;
+      border-radius: 3px;
+      width: 100%;
+      margin: 1em auto;
+      background: none;
+      color: $body-fg;
+      height: 10em;
     }
   }
+}
+textarea {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  resize: none;
+  background: none;
 }

@@ -5,4 +5,7 @@ header {
       margin: 1em;
     }
   }
+  border-bottom: 1px solid #877aff;
+  background-color: $generic-bg;
+  grid-area: header;
 }

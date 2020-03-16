@@ -4,6 +4,7 @@
 @import 'editor';
 @import 'binder';
 @import 'header';
+@import 'footer';
 @import 'react-context-menu';
 
 html, body {
@@ -14,11 +15,13 @@ html, body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+.sr-only {
+  display: none;
+}
 body {
   background: $body-bg;
   font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #222;
+  color: $body-fg;
   font-smooth: always;
   -webkit-font-smoothing: antialised;
   -moz-osx-font-smoothing: antialised;
@@ -38,28 +41,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-
-header {
-  border-bottom: 1px solid #877aff;
-  background-color: $generic-bg;
-  grid-area: header;
-}
 main {
   display: flex;
   grid-area: main;
-}
-footer {
-  background-color: $generic-bg;
-  grid-area: footer;
-  font-size: 16px;
-}
-
-.binder {
-  background-color: darken($body-bg, 40%);
-  width: 250px;
-}
-.editor {
-  background-color: #ffadce;
-  flex-grow: 1
 }

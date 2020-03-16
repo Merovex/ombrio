@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="C3BD06EF-BB8E-4BD3-8944-8A3FB6F29DB4">
+    <Notes>
+        <Note ID="0" FontSize="12.0" Position="364.0,77.0" Width="83.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Author // User</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="407.0,137.0" Width="46.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Project</String>
+            <ConnectedNoteIDs>0, 2</ConnectedNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="471.753906,208.304688" Width="55.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Sections</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="407.0,165.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>New Note</String>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <Stacks>
+        <Stack>1, 3</Stack>
+    </Stacks>
+    <AutoFit>0-2</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="F226A4E0-2282-4422-B72F-0DDAD82D77EA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="FF1216D7-A924-4A62-A2E2-FD8A2ED6C347" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="84CB4A33-8F58-4E36-A9B5-52CBDF936CF9" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="3CFEB3F0-4B9D-495F-8DA1-1F4CFAA3DBC6" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="3BE3641C-9500-4C05-8219-8089AD86EFE8" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="B36BDE4E-7C78-4C10-85A9-CBB65282FA63" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="28F8F105-E9D9-4036-AF5D-B2DFE40EDA79" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
