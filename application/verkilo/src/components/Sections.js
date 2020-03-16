@@ -15,7 +15,7 @@ export const Sections = ({projectId}) => {
           <li key={section.id}
             onClick={() => setSelectedSection(section.id) }
           >
-          <span>{section.isActive}/{section.id}/{section.title}</span>
+          <span>{section.title}</span>
           </li>
         )}
       </ul>

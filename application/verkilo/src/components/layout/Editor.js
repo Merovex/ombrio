@@ -32,13 +32,13 @@ export const Editor = () => {
   return (
     <section className='editor'>
       <div className='page'>
-        <h2 className='section-title'>{title}/{activeSection}</h2>
+        <h2 className='section-title'>{title}</h2>
         <textarea
           onChange={handleTextChange}
           placeholder="Loading text..."
           value={text} />
       </div>
-      <aside>
+      <aside className='inspector'>
         <h3>Synopsis</h3>
         <textarea
           onChange={handleSynopsisChange}

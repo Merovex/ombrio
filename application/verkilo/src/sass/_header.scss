@@ -5,7 +5,7 @@ header {
       margin: 1em;
     }
   }
-  border-bottom: 1px solid #877aff;
-  background-color: $generic-bg;
+  box-shadow: 0 0 4px rgba(#000,0.5);
+  background-color: var(--primary);
   grid-area: header;
 }

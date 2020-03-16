@@ -10,10 +10,10 @@
   div.page {
     height: calc(100vh - 180px);
     width: 50em;
-    border: 1px solid $body-fg;
+    border: 1px solid var(--foreground);
     margin: 2em auto;
     textarea {
-      color: $body-fg;
+      color: var(--foreground);
       line-height: 1.8;
       font-size: 18px;
       padding: 2em;
@@ -24,12 +24,9 @@
       font-family: "Source Serif Pro", Cambria, Cochin, Georgia, serif;
     }
   }
-  aside {
+  aside.inspector {
     max-width: 450px;
     width: 25%;
-    background: rgba(0,0,0,0.5);
-    padding: 0 1em;
-    // display: none;
     textarea {
       border-radius: 3px;
       width: 100%;

@@ -1,7 +1,10 @@
+.inspector, .binder {
+  background: rgba(#000,0.2);
+  padding: 0 1em;
+  max-width: 450px;
+}
 .binder {
   padding: 4px;
-  background: rgba(#000,0.3);
-  max-width: 450px;
   width: 25%;
   h2 {
     font-size: 1.1rem;
