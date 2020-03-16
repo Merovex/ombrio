@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useSections, useSection } from '../hooks';
+import React, { useContext } from 'react';
+import { useSections } from '../hooks';
 import { EditorContext } from '../context/EditorContext';
 
 export const Sections = ({projectId}) => {
@@ -15,7 +15,7 @@ export const Sections = ({projectId}) => {
           <li key={section.id}
             onClick={() => setSelectedSection(section.id) }
           >
-          <span>{section.isActive}//{section.id}//{section.title}</span>
+          <span>{section.isActive}/{section.id}/{section.title}</span>
           </li>
         )}
       </ul>

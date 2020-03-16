@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useState } from 'react';
 import { Sidebar } from "./Sidebar";
 import { Binder } from "./Binder";
 import { Editor } from "./Editor";

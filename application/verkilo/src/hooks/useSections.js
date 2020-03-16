@@ -10,7 +10,7 @@ export const useSections = selectedProject => {
       .collection('sections')
       .where('userId','==', 'BTL17qGXAw1H8F02xeXO')
       // .where('projectId','==',selectedProject)
-    
+
     unsubscribe = unsubscribe.where('projectId','==',selectedProject)
     unsubscribe = unsubscribe.onSnapshot(snapshot => {
       const allSections = snapshot.docs.map(section => ({
@@ -25,7 +25,7 @@ export const useSections = selectedProject => {
 
     return () => unsubscribe();
 
-  }, [selectedProject]);
+  }, [selectedProject, sections]);
 
   return { sections, setSections };
 };

@@ -1,32 +1,32 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
 import {firebase} from '../../firebase';
 
 export const Editor = () => {
-  const [section, setSection] = useState();
+  const handleTextChange = (event) => {
+    console.log(section.docId)
+    const neusection = {...section, text: event.target.value}
+    setSection(neusection);
+    firebase.firestore()
+      .collection('sections')
+      .doc(section.docId)
+      .update(neusection);
+  }
+
   const { activeSection } = useContext(EditorContext);
-  firebase.firestore()
-    .collection('sections')
-    .doc(activeSection)
-    .onSnapshot(doc => {
-      const newSection = {
-        ...doc.data(),
-        docId: doc.id,
-      }
-      if (JSON.stringify(newSection) !== JSON.stringify(section)) {
-        console.log("Changing")
-        setSection(newSection)
-      }
-    });
+  const { section, setSection } = useSection(activeSection);
+
+  const title = (section) ? section.title : "No Title";
   const text = (section) ? section.text : "";
   const synopsis = (section) ? section.synopsis : "";
-  const wordcount = Math.round(text.length / 5);
+  const wordcount = (text.length) ? Math.round(text.length / 5) : 0;
   return (
     <section className='editor'>
-      <div className='form'>
-        <h2 className='section-title'>{activeSection}</h2>
+      <div className='page'>
+        <h2 className='section-title'>{title}/{activeSection}</h2>
         <textarea
+          onChange={handleTextChange}
           placeholder="Loading text..."
           value={text} />
       </div>

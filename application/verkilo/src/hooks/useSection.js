@@ -1,14 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
 
-export const useSection = sectionId => {
-  const [section, setSection] = useState();
-  console.log("HERE!", section)
+export const useSection = activeSection => {
+  const [section, setSection] = useState({text: ""});
+
   useEffect(() => {
-    console.log("In Use:",sectionId)
     const unsubscribe = firebase.firestore()
       .collection('sections')
-      .doc(sectionId)
+      .doc(activeSection)
       .onSnapshot(doc => {
         const newSection = {
           ...doc.data(),
@@ -19,13 +18,14 @@ export const useSection = sectionId => {
           setSection(newSection)
         }
       });
-      return () => unsubscribe();
-  },[section])
+    return () => unsubscribe()
+  }, [activeSection, section]);
+
   return { section, setSection };
 };
 
-export const saveSection = (docId, section) => {
-  firebase.firestore()
-    .doc(docId)
-    .set(section);
-}
+// export const saveSection = (docId, section) => {
+//   firebase.firestore()
+//     .doc(docId)
+//     .set(section);
+// }
