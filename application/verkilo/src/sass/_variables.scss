@@ -26,6 +26,7 @@ $purple: #BD4275;
 $light-background: $gray-900;
 $dark-background: $gray-200;
 
+@media (prefers-color-scheme: light) {
 :root {
   --font-heading: Oswald,#{$system-fonts};
   --font-monospace: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
@@ -52,10 +53,11 @@ $dark-background: $gray-200;
   --primary: #b5adff;
   --button-text: #{$gray-900};
 }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #{contrast(#b5adff, $dark-background, 1.0)};
+    --primary: #{contrast(#b5adff, $dark-background)};
     --foreground: #{contrast($gray-500, $dark-background,7)};
     --gray: #{$gray-400};
     --silver: #{$gray-700};
