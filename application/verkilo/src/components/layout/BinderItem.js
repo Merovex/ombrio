@@ -52,6 +52,9 @@ export const BinderItem = ({section}) => {
       saveChanges({...section, title: newTitle})
       handleInputBlur();
     }
+    if (e.key === 'Escape') {
+      handleInputBlur();
+    }
   }
 
   return (
@@ -61,7 +64,7 @@ export const BinderItem = ({section}) => {
         >{section.title}</span>
         <input id={inputId}
           className={showInput ? "" : "hidden"}
-          onKeyPress={event => handleKeyPress(event)}
+          onKeyDown={event => handleKeyPress(event)}
           onBlur={() => handleInputBlur()}
           onChange={event => handleTitleChange(event)}
           type='input' value={newTitle} />
