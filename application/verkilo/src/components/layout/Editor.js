@@ -1,19 +1,11 @@
 import React, { useContext } from 'react';
-import { useSection } from '../../hooks';
+import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
-import {firebase} from '../../firebase';
 
 export const Editor = () => {
-  let timer = null
-  const saveOnIdle = () => {
-    console.log("I would save now");
-  }
   const saveChanges = section => {
     setSection(section);
-    firebase.firestore()
-      .collection('sections')
-      .doc(section.docId)
-      .update(section);
+    saveSection(section);
   }
   const handleSynopsisChange = (event) => {
     saveChanges({...section, synopsis: event.target.value})

@@ -1,8 +1,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import { EditorContext } from '../../context/EditorContext';
 import useDoubleClick from 'use-double-click';
-import { useSection } from '../../hooks';
-import {firebase} from '../../firebase';
+import { useSection, saveSection } from '../../hooks';
 
 export const BinderItem = ({section}) => {
   const [ newTitle, setNewTitle ] = useState(section.title);
@@ -14,19 +13,7 @@ export const BinderItem = ({section}) => {
   const spanId = "span-" + section.id;
   const inputId = "input-" + section.id;
   const itemRef = useRef();
-  // const toggleBinderItemInput = () => {
-  //   // document.getElementById(spanId).classList.toggle("hidden");
-  //   // document.getElementById(inputId).classList.toggle("hidden");
-  //   // return true;
-  //   setShowInput()
-  // }
-  const saveChanges = section => {
-    // setSection(section);
-    firebase.firestore()
-      .collection('sections')
-      .doc(section.docId)
-      .update(section);
-  }
+
   useDoubleClick({
     onSingleClick: e => {
       setSelectedSection(section.id);
@@ -49,7 +36,7 @@ export const BinderItem = ({section}) => {
   const handleKeyPress = (e) => {
     // console.log("KEY: ", e.key, e.keyCode);
     if (e.key === 'Enter') {
-      saveChanges({...section, title: newTitle})
+      saveSection({...section, title: newTitle});
       handleInputBlur();
     }
     if (e.key === 'Escape') {

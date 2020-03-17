@@ -1,7 +1,8 @@
 import { useSections } from './useSections';
-import { useSection } from './useSection';
+import { useSection, saveSection } from './useSection';
 
 export {
   useSections,
+  saveSection,
   useSection,
 };

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
 
+
 export const useSection = activeSection => {
   const [section, setSection] = useState({text: ""});
 
@@ -24,8 +25,9 @@ export const useSection = activeSection => {
   return { section, setSection };
 };
 
-// export const saveSection = (docId, section) => {
-//   firebase.firestore()
-//     .doc(docId)
-//     .set(section);
-// }
+export const saveSection = section => {
+    firebase.firestore()
+      .collection('sections')
+      .doc(section.docId)
+      .update(section);
+}
