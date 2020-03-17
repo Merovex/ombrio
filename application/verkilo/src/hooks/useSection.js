@@ -14,7 +14,7 @@ export const useSection = activeSection => {
           docId: doc.id,
         }
         if (JSON.stringify(newSection) !== JSON.stringify(section)) {
-          console.log("Changing")
+          // console.log("Changing")
           setSection(newSection)
         }
       });

@@ -11,7 +11,7 @@ export const BinderSectionItem = ({section}) => {
     alert("boing:"+ sectionId)
   }
   const bing = sectionId => {
-    setSelectedSection(sectionId);
+    // setSelectedSection(sectionId);
     alert(`Bing:` + sectionId)
   }
   return (
@@ -19,7 +19,7 @@ export const BinderSectionItem = ({section}) => {
       onClick={() => setSelectedSection(section.id) }
     >
     <span>{section.isActive}//{section.id}//{section.title}</span>
-      {/* <ContextMenuTrigger id='menu-{section.id}'>
+      <ContextMenuTrigger id='menu-{section.id}'>
         <span>{section.isActive}//{section.id}//{section.title}</span>
       </ContextMenuTrigger>
       <ContextMenu id="menu-{section.id}">
@@ -31,7 +31,7 @@ export const BinderSectionItem = ({section}) => {
         onClick={() => boing(section.id)}>
         trash
       </MenuItem>
-    </ContextMenu> */}
+    </ContextMenu>
     </li>
   );
 }

@@ -12,11 +12,7 @@ export const Sections = ({projectId}) => {
     <div className="projects" data-testid="projects">
       <ul className='sections__list' data-testid='sections'>
         {sections.map(section =>
-          <li key={section.id}
-            onClick={() => setSelectedSection(section.id) }
-          >
-          <span>{section.title}</span>
-          </li>
+          <BinderItem section={section} />
         )}
       </ul>
     </div>
