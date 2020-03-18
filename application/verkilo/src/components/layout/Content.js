@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Sidebar } from "./Sidebar";
 import { Binder } from "./Binder";
-import { Editor } from "./Editor";
+import { TextEditor } from "./TextEditor";
 import { EditorContext } from "../../context/EditorContext";
 
 export const Content = () => {
@@ -15,7 +15,7 @@ export const Content = () => {
       <Sidebar />
       <EditorContext.Provider value={contextValue}>
         <Binder />
-        <Editor />
+        <TextEditor />
       </EditorContext.Provider>
     </main>
   );

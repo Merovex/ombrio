@@ -3,7 +3,7 @@ import { FaRegCalendar, FaCog, FaQuestionCircle, FaSearch, FaCloudDownloadAlt } 
 import { GoProject, GoFileSubmodule } from "react-icons/go";
 
 export const Sidebar = () => (
-  <section className='sidebar' data-testid='sidebar'>
+  <nav className='sidebar' data-testid='sidebar'>
     <ul className='sidebar__generic'>
       <li>
         <span><GoFileSubmodule /></span>
@@ -30,5 +30,5 @@ export const Sidebar = () => (
       <li><span><FaQuestionCircle /></span></li>
       <li><span><FaCog /></span></li>
     </ul>
-  </section>
+  </nav>
 );

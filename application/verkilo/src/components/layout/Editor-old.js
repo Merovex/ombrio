@@ -1,8 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
 
+import { createEditor } from 'slate';
+import { Slate, Editable, withReact } from 'slate-react';
+
 export const Editor = () => {
+  const editor = useMemo(() => withReact(createEditor()), []);
+  const [value, setValue] = useState([]);
+
   const saveChanges = section => {
     setSection(section);
     saveSection(section);
@@ -21,14 +27,18 @@ export const Editor = () => {
   const text = (section) ? section.text : "";
   const synopsis = (section) ? section.synopsis : "";
   const wordcount = (text.length) ? Math.round(text.length / 5) : 0;
+  // <textarea
+  //   onChange={handleTextChange}
+  //   placeholder="Loading text..."
+  //   value={text} />
   return (
     <section className='editor'>
       <div className='page'>
         <h2 className='section-title'>{title}</h2>
-        <textarea
-          onChange={handleTextChange}
-          placeholder="Loading text..."
-          value={text} />
+        <Slate editor={editor} value={value} onChange={value => setValue(value)}>
+          <Editable />
+        </Slate>
+
       </div>
       <aside className='inspector'>
         <h3>Synopsis</h3>
