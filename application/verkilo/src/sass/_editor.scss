@@ -36,8 +36,9 @@
       font-size: 18px;
       width:  100%;
       padding: 0 20%;
-      height: 100%;
+      height: calc(100% - 0.5in);
       font-family: "Source Serif Pro", Cambria, Cochin, Georgia, serif;
+      overflow-y: scroll;
     }
   }
   aside.inspector {

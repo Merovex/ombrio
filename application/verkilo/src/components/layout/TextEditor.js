@@ -181,10 +181,10 @@ const toggleMark = (editor, format) => {
 }
 
 const isBlockActive = (editor, format) => {
+
   const [match] = Editor.nodes(editor, {
     match: n => n.type === format,
   })
-
   return !!match
 }
 
@@ -230,5 +230,41 @@ const initialValue = [
   {
     type: 'paragraph',
     children: [{ text: 'Try it out for yourself!' }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
+  },
+  {
+    type: 'paragraph',
+    children: [{ text: faker.lorem.paragraph() }],
   },
 ]
