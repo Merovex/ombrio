@@ -82,6 +82,8 @@ const Element = ({ attributes, children, element }) => {
       return <h1 {...attributes}>{children}</h1>
     case 'heading-two':
       return <h2 {...attributes}>{children}</h2>
+    case 'heading-three':
+      return <h3 {...attributes}>{children}</h3>
     case 'list-item':
       return <li {...attributes}>{children}</li>
     case 'numbered-list':
@@ -124,31 +126,31 @@ export const Button = React.forwardRef(
   </span>
   )
 )
-const BlockButton = (props) => {
+const BlockButton = ({format, children}) => {
   const editor = useSlate()
   return (
     <Button
-      active={isBlockActive(editor, props.children)}
+      active={isBlockActive(editor, format)}
       onMouseDown={event => {
         event.preventDefault()
-        toggleBlock(editor, props.children)
+        toggleBlock(editor, format)
       }}
     >
-      {props.children}
+      {children}
     </Button>
   )
 }
-const MarkButton = (props) => {
+const MarkButton = ({format, children}) => {
   const editor = useSlate()
   return (
     <Button
-      active={isMarkActive(editor, props.format)}
+      active={isMarkActive(editor, format)}
       onMouseDown={event => {
         event.preventDefault()
-        toggleMark(editor, props.format)
+        toggleMark(editor, format)
       }}
     >
-      {props.children}
+      {children}
     </Button>
   )
 }

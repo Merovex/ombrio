@@ -1,11 +1,11 @@
+@import 'contrast';
+
 $generic-box-shadow: rgba(0,0,0,0.1) 0px 0px 0px 1px, rgba(0,0,0,0.1) 0px 4px 11px;
 $generic-border: 1px solid #111;
 $generic-bg: #b5adff;
 $body-bg: #FFFFFF;
 $body-bg: #E6F3EA;
 $body-fg: #333D36;
-
-
 
 $system-fonts: -apple-system,BlinkMacSystemFont,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
 
@@ -33,7 +33,7 @@ $dark-background: $gray-200;
     --font-sans: "Source Sans Pro",#{$system-fonts};
     --font-serif: "Source Serif Pro",#{$system-fonts};
     --font-system: #{$system-fonts};
-
+    --toolbar: #{contrast(#777, $light-background,7)};
     --foreground: #{contrast($gray-500, $light-background,7)};
     --gray: #{$gray-300};
     --silver: #{$gray-700};
@@ -75,5 +75,6 @@ $dark-background: $gray-200;
     --blue: #{contrast($blue, $dark-background,4)};
     --purple: #{contrast($purple, $dark-background,4)};
     --button-text: #{$gray-100};
+    --primary: #5a567f;
   }
 }

@@ -2,6 +2,8 @@
   background: rgba(#000,0.2);
   padding: 0 1em;
   max-width: 450px;
+  min-width: 200px;
+  color: var(--foreground);
 }
 .binder {
   padding: 4px;

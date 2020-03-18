@@ -11,17 +11,15 @@
   aside.toolbar {
     margin: 0 auto 2em auto;
     width: 4in;
-    & > * {
-      display: inline-block;
-    }
-    & > * + * {
-      margin-left: 15px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
     span {
-      box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-      border: 1px solid #777;
-      border-radius: 2px;
+      display: inline-block;
+      color: var(--toolbar);
+      margin: 0 8px;
     }
+    border-bottom: 1px solid var(--toolbar);
   }
   section.page {
     height: calc(100vh - 150px);
