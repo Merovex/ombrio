@@ -53,7 +53,6 @@ export const TextEditor = () => {
   return (
     <article className='editor'>
       <section className='page'>
-        <h2>{title}</h2>
         <Slate
           editor={slateEditor}
           value={contents}
@@ -70,6 +69,7 @@ export const TextEditor = () => {
             <BlockButton format="numbered-list"><FormatListNumbered /></BlockButton>
             <BlockButton format="bulleted-list"><FormatListBulleted /></BlockButton>
           </Toolbar>
+          <h2 className='section-title'>{title}</h2>
           <Editable
             renderElement={renderElement}
             renderLeaf={renderLeaf}
