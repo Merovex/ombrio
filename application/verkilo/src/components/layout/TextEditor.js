@@ -1,9 +1,8 @@
 import React, { useContext, useMemo, useState, useCallback } from 'react';
-import faker from 'faker';
-// import { useSection, saveSection } from '../../hooks';
-// import { EditorContext } from "../../context/EditorContext";
+import { useSection, saveSection } from '../../hooks';
+import { EditorContext } from "../../context/EditorContext";
 
-// import { Toolbar, Icon } from './EditorComponents';
+
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
 import { Slate, Editable, withReact, useSlate } from 'slate-react';
@@ -28,18 +27,39 @@ const HOTKEYS = {
 const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 export const TextEditor = () => {
+  const { activeSection } = useContext(EditorContext);
+  const { section, setSection } = useSection(activeSection);
 
+  const handleTextChange = (contents) => {
+    saveChanges({...section, contents: contents})
+  }
+  const saveChanges = section => {
+    setSection(section);
+    if (section.docId) {
+      saveSection(section);
+    }
+  }
+
+  const title    = (section) ? section.title : "No Title";
+  const contents = (section) ? section.contents : [
+    {
+      type: 'paragraph',
+      children: [{ text: 'This is a new section.' }],
+    },
+  ];
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
-  const [value, setValue] = useState(initialValue);
-  const editor = useMemo(() => withHistory(withReact(createEditor())), [])
+  const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
   return (
     <article className='editor'>
       <section className='page'>
+        <h2>{title}</h2>
         <Slate
-          editor={editor}
-          value={value}
-          onChange={value => setValue(value)}>
+          editor={slateEditor}
+          value={contents}
+          onChange={contents => handleTextChange(contents)}
+          placeholder="Loading text..."
+          >
           <Toolbar>
             <MarkButton format="bold"><FormatBold /></MarkButton>
             <MarkButton format="italic"><FormatItalic /></MarkButton>
@@ -61,7 +81,7 @@ export const TextEditor = () => {
                 if (isHotkey(hotkey, event)) {
                   event.preventDefault()
                   const mark = HOTKEYS[hotkey]
-                  toggleMark(editor, mark)
+                  toggleMark(slateEditor, mark)
                 }
               }
             }}
@@ -220,53 +240,5 @@ const initialValue = [
           ', or add a semantically rendered block quote in the middle of the page, like this:',
       },
     ],
-  },
-  {
-    type: 'block-quote',
-    children: [
-      { text: faker.lorem.paragraph() },
-      { text: faker.lorem.paragraph() },
-      { text: faker.lorem.paragraph() }
-    ],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: 'Try it out for yourself!' }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: faker.lorem.paragraph() }],
   },
 ]

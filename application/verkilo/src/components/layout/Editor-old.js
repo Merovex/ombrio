@@ -35,9 +35,10 @@ export const Editor = () => {
     <section className='editor'>
       <div className='page'>
         <h2 className='section-title'>{title}</h2>
-        <Slate editor={editor} value={value} onChange={value => setValue(value)}>
-          <Editable />
-        </Slate>
+          <textarea
+            onChange={handleTextChange}
+            placeholder="Loading text..."
+            value={text} />
 
       </div>
       <aside className='inspector'>

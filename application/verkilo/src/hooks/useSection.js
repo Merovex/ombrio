@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
-
-
+// console.log(JSON.string)
 export const useSection = activeSection => {
-  const [section, setSection] = useState({text: ""});
-
+  const [section, setSection] = useState({contents: [
+    {
+      type: 'paragraph',
+      children: [{ text: 'Loading content...' }],
+    },
+  ]});
   useEffect(() => {
     const unsubscribe = firebase.firestore()
       .collection('sections')
@@ -15,7 +18,6 @@ export const useSection = activeSection => {
           docId: doc.id,
         }
         if (JSON.stringify(newSection) !== JSON.stringify(section)) {
-          // console.log("Changing")
           setSection(newSection)
         }
       });
