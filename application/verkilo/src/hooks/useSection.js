@@ -1,6 +1,16 @@
 import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
 // console.log(JSON.string)
+export const createSection = pId => {
+  const templateSection = {
+    contents: [{type: 'paragraph', children: [{ text: '' }]}],
+    projectId: pId,
+    title: "New Section",
+    synopsis: "",
+    userId: "BTL17qGXAw1H8F02xeXO",
+    isActive: false
+  }
+}
 export const useSection = activeSection => {
   const [section, setSection] = useState({contents: [
     {
