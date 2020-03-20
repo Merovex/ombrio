@@ -3,6 +3,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import { App } from './App';
 import './sass/App.scss';
+import 'react-sortable-tree/style.css'; // Needed during bootstrapping.
 
 render(<App />, document.getElementById('root'));
 

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
 // console.log(JSON.string)
-export const createSection = pId => {
+export const createSection = ({projectId, userId, title}) => {
   const templateSection = {
     contents: [{type: 'paragraph', children: [{ text: '' }]}],
-    projectId: pId,
-    title: "New Section",
+    projectId: projectId, userId, title,
+    title: "Untitled Document",
     synopsis: "",
     userId: "BTL17qGXAw1H8F02xeXO",
     isActive: false

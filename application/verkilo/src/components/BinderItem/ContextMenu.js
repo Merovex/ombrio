@@ -25,7 +25,7 @@ export const BinderSectionItem = ({section}) => {
       <ContextMenu id="menu-{section.id}">
       <MenuItem data={{foo: 'bar'}}
         onClick={() => boing(section.id)}>
-        rename
+        Add New Text
       </MenuItem>
       <MenuItem data={{foo: 'bar'}}
         onClick={() => boing(section.id)}>
