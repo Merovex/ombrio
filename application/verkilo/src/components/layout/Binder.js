@@ -9,11 +9,11 @@ import { BinderItem } from "./BinderItem";
 export const Binder = props => {
 
   const { sections } = useSections('21lMxW5WU1f3fGUVBcrc');
-  const [treeData, setTreeData] = useState([
-    {title: "This", children: []},
-    {title: "That", children: []},
-    {title: "Other", children: []},
-  ]);
+
+  const [treeData, setTreeData] = useState(sections);
+  if(treeData.length != sections.length) {
+    setTreeData(sections)
+  }
   return (
     <nav className='binder' data-testid='binder'>
     <div>
