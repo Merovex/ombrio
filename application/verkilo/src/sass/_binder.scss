@@ -1,13 +1,13 @@
 .inspector, .binder {
   background: rgba(#000,0.2);
   padding: 0 1em;
-  max-width: 450px;
+  // max-width: 450px;
   min-width: 200px;
   color: var(--foreground);
 }
 .binder {
   padding: 4px;
-  width: 25%;
+  width: 600px !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,6 +39,12 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+  .rst__node {
+    border: 1px solid red !important;
+    .rst__moveHandle {
+      // display: none;
     }
   }
 }

@@ -1,29 +1,18 @@
-import React, { useContext, useRef, useEffect, useState } from 'react';
+import React from 'react';
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
-import SortableTree from 'react-sortable-tree';
 import { FaFileMedical } from 'react-icons/fa'
 
 import { useSections } from '../../hooks';
 import { BinderItem } from "./BinderItem";
 
-export const Binder = props => {
+export const Binder = () => {
 
   const { sections } = useSections('21lMxW5WU1f3fGUVBcrc');
 
-  const [treeData, setTreeData] = useState(sections);
-  if(treeData.length != sections.length) {
-    setTreeData(sections)
-  }
   return (
     <nav className='binder' data-testid='binder'>
     <div>
       <h2>Project Name</h2>
-        <div style={{ height: 400 }}>
-          <SortableTree
-            treeData={treeData}
-            onChange={treeData => setTreeData(treeData)}
-          />
-        </div>
       <h3>Manuscript</h3>
       <ContextMenuTrigger id='binder-context-menu'>
       <div className="projects" data-testid="projects">
