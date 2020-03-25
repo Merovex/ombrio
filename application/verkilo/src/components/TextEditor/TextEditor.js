@@ -2,10 +2,9 @@ import React, { useContext, useMemo, useState, useCallback } from 'react';
 import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
 
-
 import isHotkey from 'is-hotkey';
-import { createEditor, Transforms, Editor } from 'slate';
 import { Slate, Editable, withReact, useSlate } from 'slate-react';
+import { createEditor, Transforms, Editor } from 'slate';
 import { withHistory } from 'slate-history';
 
 import LooksOneIcon from '@material-ui/icons/LooksOne';
@@ -39,13 +38,13 @@ export const TextEditor = () => {
       saveSection(section);
     }
   }
-
+  const initialContentText = {
+    type: 'paragraph',
+    children: [{ text: 'This is a new section.' }],
+  }
   const title    = (section) ? section.title : "No Title";
   const contents = (section) ? section.contents : [
-    {
-      type: 'paragraph',
-      children: [{ text: 'This is a new section.' }],
-    },
+    initialContentText
   ];
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
