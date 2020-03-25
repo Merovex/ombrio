@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Sidebar } from "./Sidebar";
 import { Binder } from "../Binder/Binder";
-import { TextEditor } from "./TextEditor";
+import { TextEditor } from "../TextEditor/TextEditor";
 import { EditorContext } from "../../context/EditorContext";
 
 export const Content = () => {

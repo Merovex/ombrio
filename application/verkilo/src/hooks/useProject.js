@@ -1,16 +1,6 @@
 import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
-// console.log(JSON.string)
-// export const createSection = ({projectId, userId, title}) => {
-//   const templateSection = {
-//     contents: [{type: 'paragraph', children: [{ text: '' }]}],
-//     projectId: projectId, userId, title,
-//     title: "Untitled Document",
-//     synopsis: "",
-//     userId: "BTL17qGXAw1H8F02xeXO",
-//     isActive: false
-//   }
-// }
+
 export const useProject = activeProjectId => {
   const [project, setProject] = useState({});
   useEffect(() => {
@@ -22,7 +12,6 @@ export const useProject = activeProjectId => {
           ...doc.data(),
           docId: doc.id,
         }
-        console.log("useProject", newProject, project)
         if (JSON.stringify(newProject) !== JSON.stringify(project)) {
           setProject(newProject)
         }

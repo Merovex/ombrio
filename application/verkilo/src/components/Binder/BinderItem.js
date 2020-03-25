@@ -1,7 +1,7 @@
 import React, { useState , useContext, useRef } from 'react';
 import {  Draggable } from 'react-beautiful-dnd';
 import useDoubleClick from 'use-double-click';
-import { useSection, saveSection, saveProject } from '../../hooks';
+import { saveSection, saveProject } from '../../hooks';
 
 import { EditorContext } from '../../context/EditorContext';
 
