@@ -5,6 +5,12 @@
   min-width: 200px;
   color: var(--foreground);
 }
+.draggable {
+  border: 1px solid red;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 2px;
+}
 .binder {
   padding: 4px;
   width: 600px !important;
@@ -41,10 +47,9 @@
       }
     }
   }
-  .rst__node {
+  .square {
     border: 1px solid red !important;
-    .rst__moveHandle {
-      // display: none;
-    }
+    height: 1in;
+
   }
 }

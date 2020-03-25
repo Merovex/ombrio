@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaRegCalendar, FaCog, FaQuestionCircle, FaSearch, FaCloudDownloadAlt } from 'react-icons/fa';
+import { FaRegCalendar,
+         FaCog,
+         FaQuestionCircle,
+         FaSearch,
+         FaCloudDownloadAlt
+       } from 'react-icons/fa';
 import { GoProject, GoFileSubmodule } from "react-icons/go";
 
 export const Sidebar = () => (
