@@ -1,0 +1,60 @@
+.editor {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  h2.section-title {
+    margin: 10px auto;
+    font-size: 20px;
+    padding: 0 20%;
+  }
+  aside.toolbar {
+    margin: 0 auto 2em auto;
+    width: 4in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      display: inline-block;
+      color: var(--toolbar);
+      margin: 0 8px;
+    }
+    border-bottom: 1px solid var(--toolbar);
+  }
+  section.page {
+    height: calc(100vh - 150px);
+    min-width: 6in;
+    width: 100%;
+    margin: 2em auto;
+    & > div { // SLATE styling.
+      color: var(--foreground);
+      outline: none;
+      border: none;
+      line-height: 1.8;
+      font-size: 18px;
+      width:  100%;
+      padding: 0 20%;
+      height: calc(100% - 0.7in);
+      font-family: "Source Serif Pro", Cambria, Cochin, Georgia, serif;
+      overflow-y: scroll;
+    }
+  }
+  aside.inspector {
+    max-width: 450px;
+    width: 25%;
+    textarea {
+      border-radius: 3px;
+      width: 100%;
+      margin: 1em auto;
+      outline: none;
+      color: var(--foreground);
+      background: var(--background);
+      height: 10em;
+    }
+  }
+}
+textarea {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  resize: none;
+  background: none;
+}

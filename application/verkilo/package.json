@@ -3,21 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "cors": "^2.8.5",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "faker": "^4.1.0",
+    "firebase": "^6.2.4",
+    "is-hotkey": "^0.1.6",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
     "react": "^16.13.0",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-contextmenu": "^2.13.0",
+    "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-icons": "^3.9.0",
+    "react-scripts": "3.4.0",
+    "react-uuid": "^1.0.2",
+    "semantic-ui-react": "^0.88.2",
+    "slate": "^0.57.1",
+    "slate-history": "^0.57.1",
+    "slate-react": "^0.57.1",
+    "use-double-click": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

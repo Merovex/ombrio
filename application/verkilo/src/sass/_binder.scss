@@ -1,0 +1,55 @@
+.inspector, .binder {
+  background: rgba(#000,0.2);
+  padding: 0 1em;
+  // max-width: 450px;
+  min-width: 200px;
+  color: var(--foreground);
+}
+.draggable {
+  border: 1px solid red;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 2px;
+}
+.binder {
+  padding: 4px;
+  width: 600px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 1.0rem;
+  }
+  ul {
+    margin-left: 4px;
+    display: block;
+  }
+  li {
+    list-style-type: none;
+    margin: 4px 4px 4px 0;
+    padding: 4px;
+    display:flex;
+    justify-content: space-between;
+    width: 85%;
+    span, input {
+      cursor: pointer;
+      width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  .binder__section {
+    li {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .square {
+    border: 1px solid red !important;
+    height: 1in;
+
+  }
+}

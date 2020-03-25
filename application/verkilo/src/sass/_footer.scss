@@ -1,0 +1,16 @@
+footer {
+  background-color: rgba(#000,0.5);
+  grid-area: footer;
+  padding: 0 8px;
+
+  height: 30px;
+  line-height: 1;
+  color: #FFF;
+  span {
+    min-height: 30px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+  }
+}

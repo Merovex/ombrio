@@ -1,0 +1,17 @@
+
+nav.sidebar {
+  background: rgba(#000,0.4);
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  li {
+    margin: 2em auto;
+    width: 24px;
+    list-style-type: none;
+  }
+  svg {
+    font-size: 24px;
+    color: var(--foreground);
+  }
+}
