@@ -7,7 +7,7 @@ export const createSection = ({projectId, userId, title}) => {
     projectId: projectId, userId, title,
     title: "Untitled Document",
     synopsis: "",
-    userId: "BTL17qGXAw1H8F02xeXO",
+    userId: "fefe2085-8a31-495f-b214-5535bc1de13a",
     isActive: false
   }
 }

@@ -6,14 +6,20 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { useProject, saveProject } from '../../hooks';
 // import { EditorContext } from '../../context/EditorContext';
 
-// import { Binder } from "./Binder";
 import { BinderItem } from "./BinderItem";
 
-export const Drawer = ({activeProjectId}) => {
+export const Binder = ({activeProjectId}) => {
+  // console.log("@Binder", activeProjectId)
   const { project } = useProject(activeProjectId);
   const [items, setItems] = useState(project.binder)
+  const [a, setA] = useState(false);
   if (items === undefined && project.binder !== undefined) {
     setItems(project.binder)
+  }
+
+  const refreshBinder = () => {
+    setA(!a)
+    console.log("updated!");
   }
 
   const onDragEnd = (result) => {
@@ -43,8 +49,10 @@ export const Drawer = ({activeProjectId}) => {
                <h3>Manuscript</h3>
                {items.map((item, index) => (
                  <BinderItem
+                   refreshBinder={() => refreshBinder()}
                    index={index}
                    item={item}
+                   project={project}
                    provided={provided}
                    snapshot={snapshot}
                    />
@@ -52,18 +60,6 @@ export const Drawer = ({activeProjectId}) => {
                {provided.placeholder}
              </div>
            )}
-         </Droppable>
-         <Droppable droppableId="notebook">
-           {(provided, snapshot) => (
-             <div
-               {...provided.droppableProps}
-               ref={provided.innerRef}
-               className="droppable"
-             >
-             <h3>Notebook</h3>
-            {provided.placeholder}
-           </div>
-         )}
          </Droppable>
        </DragDropContext>
     </nav>

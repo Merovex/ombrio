@@ -3,13 +3,13 @@ import { firebase } from '../firebase';
 
 export const useSections = selectedProject => {
   const [sections, setSections] = useState([]);
-
+  console.log("@useSections", selectedProject)
   useEffect(() => {
     let unsubscribe = firebase
       .firestore()
       .collection('sections')
-      .where('userId','==', 'BTL17qGXAw1H8F02xeXO')
-      // .where('projectId','==',selectedProject)
+      // .where('userId','==', 'fefe2085-8a31-495f-b214-5535bc1de13a')
+      .where('projectId','==',selectedProject)
 
     unsubscribe = unsubscribe.where('projectId','==',selectedProject)
     unsubscribe = unsubscribe.onSnapshot(snapshot => {
