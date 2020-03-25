@@ -1,10 +1,11 @@
-import React, { useContext, useMemo, useState, useCallback, useEffect } from 'react';
+import React, { useContext, useMemo, useState, useCallback } from 'react';
 import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
 
+
 import isHotkey from 'is-hotkey';
-import { Slate, Editable, withReact, useSlate } from 'slate-react';
 import { createEditor, Transforms, Editor } from 'slate';
+import { Slate, Editable, withReact, useSlate } from 'slate-react';
 import { withHistory } from 'slate-history';
 
 import LooksOneIcon from '@material-ui/icons/LooksOne';
@@ -28,37 +29,27 @@ const LIST_TYPES = ['numbered-list', 'bulleted-list']
 export const TextEditor = () => {
   const { activeSection } = useContext(EditorContext);
   const { section, setSection } = useSection(activeSection);
-  const [ contents, setContents ]  = useState(initialValue)
-  // const contents =
-  const [ title, setTitle ]  = useState(section.title)
 
-
-  // const contents = [...section.contents]
-  if (contents !== section.contents) {
-    setContents(section.contents)
-  }
-  useEffect(() => {
-    setTitle(section.title)
-  })
-  useEffect(() => {
-    setContents(contents)
-  })
   const handleTextChange = (contents) => {
-    setContents(contents)
     saveChanges({...section, contents: contents})
   }
   const saveChanges = section => {
     setSection(section);
-    console.log("@saveChanges", section)
     if (section.docId) {
       saveSection(section);
     }
   }
 
+  const title    = (section) ? section.title : "No Title";
+  const contents = (section) ? section.contents : [
+    {
+      type: 'paragraph',
+      children: [{ text: 'This is a new section.' }],
+    },
+  ];
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
-
   return (
     <article className='editor'>
       <section className='page'>
@@ -66,6 +57,7 @@ export const TextEditor = () => {
           editor={slateEditor}
           value={contents}
           onChange={contents => handleTextChange(contents)}
+          placeholder="Loading text..."
           >
           <Toolbar>
             <MarkButton format="bold"><FormatBold /></MarkButton>
@@ -81,7 +73,7 @@ export const TextEditor = () => {
           <Editable
             renderElement={renderElement}
             renderLeaf={renderLeaf}
-            placeholder="Enter text"
+            placeholder="Enter some rich text…"
             autoFocus
             spellCheck
             onKeyDown={event => {
