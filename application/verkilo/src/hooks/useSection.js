@@ -12,12 +12,7 @@ export const createSection = ({projectId, userId, title}) => {
   }
 }
 export const useSection = activeSection => {
-  const [section, setSection] = useState({contents: [
-    {
-      type: 'paragraph',
-      children: [{ text: 'Loading content...' }],
-    },
-  ]});
+  const [section, setSection] = useState({contents: null});
   useEffect(() => {
     const unsubscribe = firebase.firestore()
       .collection('sections')

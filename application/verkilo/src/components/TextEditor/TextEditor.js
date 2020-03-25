@@ -1,7 +1,7 @@
-import React, { useContext, useMemo, useState, useCallback } from 'react';
+import React, { useContext, useMemo, useState, useEffect, useCallback } from 'react';
 import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
-
+import IdleTimer from 'react-idle-timer'
 
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
@@ -29,30 +29,58 @@ const LIST_TYPES = ['numbered-list', 'bulleted-list']
 export const TextEditor = () => {
   const { activeSection } = useContext(EditorContext);
   const { section, setSection } = useSection(activeSection);
+  const [contents, setContents] = useState(section.contents);
+
+  if (!contents && section.contents) {
+    setContents(section.contents)
+  }
 
   const handleTextChange = (contents) => {
+    setContents(contents)
     saveChanges({...section, contents: contents})
   }
   const saveChanges = section => {
     setSection(section);
     if (section.docId) {
-      saveSection(section);
+      // saveSection(section);
     }
   }
+  let idleTimer = null
 
   const title    = (section) ? section.title : "No Title";
-  const contents = (section) ? section.contents : [
-    {
-      type: 'paragraph',
-      children: [{ text: 'This is a new section.' }],
-    },
-  ];
+
+  const onAction = (e) => {
+    // console.log('user did something', e)
+    // console.log('time remaining', idleTimer.getRemainingTime())
+  }
+
+  const onActive = (e) => {
+    // console.log('user is active', e)
+    // console.log('time remaining', idleTimer.getRemainingTime())
+  }
+
+  const onIdle = (e) => {
+    // console.log('Saving content')
+    // console.log('last active', idleTimer.getLastActiveTime())
+    saveSection({...section, contents: contents})
+  }
+
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
   return (
     <article className='editor'>
       <section className='page'>
+        <h2>{title}</h2>
+          <IdleTimer
+            ref={(ref) => { idleTimer = ref }}
+            element={document}
+            onIdle={() => onIdle()}
+            onAction={() => onAction()}
+            debounce={250}
+            timeout={3000} />
+          { contents &&
+
         <Slate
           editor={slateEditor}
           value={contents}
@@ -69,7 +97,6 @@ export const TextEditor = () => {
             <BlockButton format="numbered-list"><FormatListNumbered /></BlockButton>
             <BlockButton format="bulleted-list"><FormatListBulleted /></BlockButton>
           </Toolbar>
-          <h2 className='section-title'>{title}</h2>
           <Editable
             renderElement={renderElement}
             renderLeaf={renderLeaf}
@@ -87,6 +114,7 @@ export const TextEditor = () => {
             }}
           />
         </Slate>
+        }
       </section>
     </article>
   )

@@ -76,7 +76,8 @@ export const BinderItem = ({
           >{item.title}</span>
           <input id={inputId}
             className={showInput ? "" : "hidden"}
-            type='input' value={newTitle} />
+
+            type='input' defaultValue={newTitle} />
         </div>
       </div>
     )}
