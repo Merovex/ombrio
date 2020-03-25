@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState, useCallback } from 'react';
+import React, { useContext, useMemo, useState, useCallback, useEffect } from 'react';
 import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
 
@@ -28,27 +28,37 @@ const LIST_TYPES = ['numbered-list', 'bulleted-list']
 export const TextEditor = () => {
   const { activeSection } = useContext(EditorContext);
   const { section, setSection } = useSection(activeSection);
+  const [ contents, setContents ]  = useState(initialValue)
+  // const contents =
+  const [ title, setTitle ]  = useState(section.title)
 
+
+  // const contents = [...section.contents]
+  if (contents !== section.contents) {
+    setContents(section.contents)
+  }
+  useEffect(() => {
+    setTitle(section.title)
+  })
+  useEffect(() => {
+    setContents(contents)
+  })
   const handleTextChange = (contents) => {
+    setContents(contents)
     saveChanges({...section, contents: contents})
   }
   const saveChanges = section => {
     setSection(section);
+    console.log("@saveChanges", section)
     if (section.docId) {
       saveSection(section);
     }
   }
-  const initialContentText = {
-    type: 'paragraph',
-    children: [{ text: 'This is a new section.' }],
-  }
-  const title    = (section) ? section.title : "No Title";
-  const contents = (section) ? section.contents : [
-    initialContentText
-  ];
+
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
+
   return (
     <article className='editor'>
       <section className='page'>
@@ -56,7 +66,6 @@ export const TextEditor = () => {
           editor={slateEditor}
           value={contents}
           onChange={contents => handleTextChange(contents)}
-          placeholder="Loading text..."
           >
           <Toolbar>
             <MarkButton format="bold"><FormatBold /></MarkButton>
@@ -72,7 +81,7 @@ export const TextEditor = () => {
           <Editable
             renderElement={renderElement}
             renderLeaf={renderLeaf}
-            placeholder="Enter some rich text…"
+            placeholder="Enter text"
             autoFocus
             spellCheck
             onKeyDown={event => {
