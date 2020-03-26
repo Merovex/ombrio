@@ -27,10 +27,7 @@ export const Editor = () => {
   const text = (section) ? section.text : "";
   const synopsis = (section) ? section.synopsis : "";
   const wordcount = (text.length) ? Math.round(text.length / 5) : 0;
-  // <textarea
-  //   onChange={handleTextChange}
-  //   placeholder="Loading text..."
-  //   value={text} />
+
   return (
     <section className='editor'>
       <div className='page'>

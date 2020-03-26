@@ -1,7 +1,7 @@
 import React, { useContext, useMemo, useState, useEffect, useCallback } from 'react';
-import { useSection, saveSection } from '../../hooks';
+import { saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
-import IdleTimer from 'react-idle-timer'
+import IdleTimer from 'react-idle-timer';
 
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
@@ -28,7 +28,7 @@ const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 export const TextEditor = () => {
   let idleTimer = null;
-  const { section, setSection } = useContext(EditorContext);
+  const { section, setSaved } = useContext(EditorContext);
   const [contents, setContents] = useState(section.contents);
   const [title, setTitle] = useState(section.title)
 
@@ -37,16 +37,21 @@ export const TextEditor = () => {
     setTitle(section.title)
   },[section])
 
+  const handleSave = () => {
+    saveSection({...section, contents: contents})
+    setSaved("Draft saved")
+  }
   const handleTextChange = (contents) => {
+    setSaved(false)
     setContents(contents)
   }
   const saveOnIdle = (e) => {
-    // console.log("Saving...")
-    saveSection({...section, contents: contents})
+    console.log("Saving...")
+    handleSave();
   }
   const handleBlur = (e) => {
-    // console.log("Blurred save",e)
-    saveSection({...section, contents: contents})
+    console.log("Blurred save",e)
+    handleSave();
   }
 
   const renderElement = useCallback(props => <Element {...props} />, [])
