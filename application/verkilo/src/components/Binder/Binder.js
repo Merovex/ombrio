@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-// import { Button, Icon, Table, Flag, Ref } from 'semantic-ui-react'
 // import { FaFileMedical } from 'react-icons/fa';
-// import { useSections } from '../../hooks';
-import { useProject, saveProject } from '../../hooks';
-// import { EditorContext } from '../../context/EditorContext';
 
+import { saveProject } from '../../hooks';
+import { EditorContext } from "../../context/EditorContext";
 import { BinderItem } from "./BinderItem";
 
-export const Binder = ({activeProjectId}) => {
-  // console.log("@Binder", activeProjectId)
-  const { project } = useProject(activeProjectId);
+export const Binder = () => {
+  const { project } = useContext(EditorContext);
   const [items, setItems] = useState(project.binder)
   const [a, setA] = useState(false);
   if (items === undefined && project.binder !== undefined) {
@@ -46,7 +43,7 @@ export const Binder = ({activeProjectId}) => {
                className="droppable"
              >
                <h2>{project.title}</h2>
-               <h3>Manuscript</h3>
+               <h3>MANUSCRIPT</h3>
                {items.map((item, index) => (
                  <BinderItem
                    refreshBinder={() => refreshBinder()}

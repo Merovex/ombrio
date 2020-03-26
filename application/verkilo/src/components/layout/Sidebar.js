@@ -8,32 +8,32 @@ import { FaRegCalendar,
 import { GoProject, GoFileSubmodule } from "react-icons/go";
 
 export const Sidebar = () => (
-  <nav className='sidebar' data-testid='sidebar'>
-    <ul className='sidebar__generic'>
-      <li>
+  <nav className='sidebar expanded' data-testid='sidebar'>
+    <div className="main">
+      <div className='active'>
         <span><GoFileSubmodule /></span>
         <span className='sr-only'>Explorer</span>
-      </li>
-      <li>
+      </div>
+      <div>
         <span><FaSearch /></span>
         <span className='sr-only'>Search</span>
-      </li>
-      <li>
+      </div>
+      <div>
         <span><GoProject /></span>
         <span className='sr-only'>Manager</span>
-      </li>
-      <li>
+      </div>
+      <div>
         <span><FaRegCalendar /></span>
         <span className='sr-only'>Scheduler</span>
-      </li>
-      <li>
+      </div>
+      <div>
         <span><FaCloudDownloadAlt /></span>
         <span className='sr-only'>Exporter</span>
-      </li>
-    </ul>
-    <ul>
-      <li><span><FaQuestionCircle /></span></li>
-      <li><span><FaCog /></span></li>
-    </ul>
+      </div>
+    </div>
+    <div>
+      <div><span><FaQuestionCircle /></span></div>
+      <div><span><FaCog /></span></div>
+    </div>
   </nav>
 );

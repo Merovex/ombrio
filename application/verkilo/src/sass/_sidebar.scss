@@ -1,17 +1,31 @@
 
 nav.sidebar {
-  background: rgba(#000,0.4);
-  padding: 0 1em;
-  display: flex;
+  &.expanded {
+    min-width: 55px !important;
+    display: flex;
+  }
+  &.hidden {
+    display: none;
+  }
+  background: var(--sidebar-bg);
+  color: var(--sidebar-fg);
+
   flex-direction: column;
   justify-content: space-between;
-  li {
-    margin: 2em auto;
-    width: 24px;
+  align-items: center;
+  div {
     list-style-type: none;
+    margin: 1em 0;
+    svg {
+      font-size: 1.6rem;
+      color: var(--sidebar-fg);
+      opacity: 0.5;
+    }
+    &.active, &.hover {
+      svg {
+        opacity: 1.0;
+      }
+    }
   }
-  svg {
-    font-size: 24px;
-    color: var(--foreground);
-  }
+
 }

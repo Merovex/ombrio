@@ -27,21 +27,25 @@ const HOTKEYS = {
 const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 export const TextEditor = () => {
-  let idleTimer = null
-  const { activeSection } = useContext(EditorContext);
-  const { section, setSection } = useSection(activeSection);
+  let idleTimer = null;
+  const { section, setSection } = useContext(EditorContext);
   const [contents, setContents] = useState(section.contents);
-  const title    = (section) ? section.title : "";
+  const [title, setTitle] = useState(section.title)
 
-  if (!contents && section.contents) {
+  useEffect(() => {
     setContents(section.contents)
-  }
+    setTitle(section.title)
+  },[section])
 
   const handleTextChange = (contents) => {
     setContents(contents)
-    setSection({...section, contents: contents})
   }
   const saveOnIdle = (e) => {
+    // console.log("Saving...")
+    saveSection({...section, contents: contents})
+  }
+  const handleBlur = (e) => {
+    // console.log("Blurred save",e)
     saveSection({...section, contents: contents})
   }
 
@@ -57,7 +61,7 @@ export const TextEditor = () => {
             element={document}
             onIdle={() => saveOnIdle()}
             debounce={250}
-            timeout={5000} />
+            timeout={3000} />
           { contents &&
             <Slate
               editor={slateEditor}
@@ -78,6 +82,7 @@ export const TextEditor = () => {
               <Editable
                 renderElement={renderElement}
                 renderLeaf={renderLeaf}
+                onBlur={handleBlur}
                 placeholder="Enter some rich text…"
                 autoFocus
                 spellCheck

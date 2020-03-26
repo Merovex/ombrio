@@ -2,10 +2,14 @@
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  background: var(--editor-bg);
   h2.section-title {
     margin: 10px auto;
-    font-size: 20px;
+    text-align: center;
+    font-size: 2.4rem;
     padding: 0 20%;
+    font-weight: normal;
+    color: var(--foreground) !important;
   }
   aside.toolbar {
     margin: 0 auto 2em auto;
@@ -37,6 +41,19 @@
       font-family: "Source Serif Pro", Cambria, Cochin, Georgia, serif;
       overflow-y: scroll;
     }
+    strong {
+      color: var(--orange);
+    }
+    h1, h2 {
+      color: var(--orange);
+      font-weight: normal;
+    }
+    em {
+      color: var(--purple);
+    }
+    blockquote, code {
+      color: var(--green);
+    }
   }
   aside.inspector {
     max-width: 450px;
@@ -47,7 +64,7 @@
       margin: 1em auto;
       outline: none;
       color: var(--foreground);
-      background: var(--background);
+      background: var(--editor-bg);
       height: 10em;
     }
   }
