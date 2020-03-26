@@ -32,20 +32,20 @@ body {
   min-width: 600px;
 }
 .App {
-  display: grid;
-  grid-template-rows: 60px auto 20px;
   width: 100vw;
   height: 100vh;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  display: flex;
+  flex-direction: column;
 }
 ul {
   margin: 0;
   padding: 0;
 }
+footer {
+  flex: 1;
+  max-height: 26px;
+}
 main {
   display: flex;
-  grid-area: main;
+  flex: 1;
 }

@@ -14,19 +14,17 @@ export const BinderItem = ({
   snapshot
 }) => {
   const [ newTitle, setNewTitle ] = useState(item.title);
-  const { setActiveSection } = useContext(EditorContext);
+  const { section, setSection,sectionId, setSectionId } = useContext(EditorContext);
   const [ showInput, setShowInput ] = useState(false);
 
   const spanId = "span-" + item.docId;
   const inputId = "input-" + item.docId;
   const element = useRef();
 
-  const setSelectedSection = sectionId => {
-    setActiveSection(sectionId)
-  }
   useDoubleClick({
     onSingleClick: e => {
-      setSelectedSection(item.docId);
+      setSectionId(item.docId)
+      console.log(item.docId, section)
     },
     onDoubleClick: e => {
       setNewTitle(item.title);
@@ -61,7 +59,7 @@ export const BinderItem = ({
     index={index}>
     {(provided, snapshot) => (
       <div
-        className="draggable"
+        className="draggable item"
         ref={provided.innerRef}
         {...provided.draggableProps}
         {...provided.dragHandleProps}
@@ -72,10 +70,10 @@ export const BinderItem = ({
           onChange={event => handleTitleChange(event)}
           >
           <span id={spanId}
-            className={showInput ? "hidden" : ""}
+            className={showInput ? "hidden" : "shown"}
           >{item.title}</span>
           <input id={inputId}
-            className={showInput ? "" : "hidden"}
+            className={showInput ? "shown" : "hidden"}
 
             type='input' defaultValue={newTitle} />
         </div>

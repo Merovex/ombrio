@@ -45,13 +45,18 @@ $dark-background: $gray-200;
     --black: #{$gray-200};
     --highlight: #{$gray-500};
     --white: #{$gray-900};
-    --red: #{contrast(red, $light-background, 6)};
-    --green:  #{contrast($green, $light-background, 6)};
-    --orange: #{contrast($orange, $light-background, 6)};
-    --blue: #{contrast($blue, $light-background, 6)};
-    --purple: #{contrast($purple, $light-background, 6)};
+    --red: #{contrast(red, $light-background, 4)};
+    --green:  #{contrast($green, $light-background, 4)};
+    --orange: #{contrast($orange, $light-background, 4)};
+    --blue: #{contrast($blue, $light-background, 4)};
+    --purple: #{contrast($purple, $light-background, 4)};
     --primary: #b5adff;
+    --footer-bg: #b5adff;
     --button-text: #{$gray-900};
+    --sidebar-bg: #161616;
+    --sidebar-fg: #F0f0f0;
+    --editor-bg: #FFFFFF;
+    --binder-bg: #d4d4d4;
   }
 }
 
@@ -76,5 +81,10 @@ $dark-background: $gray-200;
     --purple: #{contrast($purple, $dark-background,4)};
     --button-text: #{$gray-100};
     --primary: #5a567f;
+    --footer-bg: #5a567f;
+    --editor-bg: #222;
+    --sidebar-bg: #444;
+    --sidebar-fg: #F0f0f0;
+    --binder-bg: #333;
   }
 }

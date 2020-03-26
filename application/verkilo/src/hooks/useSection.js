@@ -11,12 +11,13 @@ export const createSection = ({projectId, userId, title}) => {
     isActive: false
   }
 }
-export const useSection = activeSection => {
+export const useSection = sectionId => {
   const [section, setSection] = useState({contents: null});
+
   useEffect(() => {
     const unsubscribe = firebase.firestore()
       .collection('sections')
-      .doc(activeSection)
+      .doc(sectionId)
       .onSnapshot(doc => {
         const newSection = {
           ...doc.data(),
@@ -27,7 +28,7 @@ export const useSection = activeSection => {
         }
       });
     return () => unsubscribe()
-  }, [activeSection, section]);
+  }, [sectionId, section]);
 
   return { section, setSection };
 };
