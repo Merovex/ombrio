@@ -1,7 +1,7 @@
-import React, { useContext, useMemo, useState, useCallback } from 'react';
+import React, { useContext, useMemo, useState, useEffect, useCallback } from 'react';
 import { useSection, saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
-
+import IdleTimer from 'react-idle-timer'
 
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
@@ -27,66 +27,72 @@ const HOTKEYS = {
 const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 export const TextEditor = () => {
+  let idleTimer = null
   const { activeSection } = useContext(EditorContext);
   const { section, setSection } = useSection(activeSection);
+  const [contents, setContents] = useState(section.contents);
+  const title    = (section) ? section.title : "";
+
+  if (!contents && section.contents) {
+    setContents(section.contents)
+  }
 
   const handleTextChange = (contents) => {
-    saveChanges({...section, contents: contents})
+    setContents(contents)
+    setSection({...section, contents: contents})
   }
-  const saveChanges = section => {
-    setSection(section);
-    if (section.docId) {
-      saveSection(section);
-    }
+  const saveOnIdle = (e) => {
+    saveSection({...section, contents: contents})
   }
 
-  const title    = (section) ? section.title : "No Title";
-  const contents = (section) ? section.contents : [
-    {
-      type: 'paragraph',
-      children: [{ text: 'This is a new section.' }],
-    },
-  ];
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
   return (
     <article className='editor'>
       <section className='page'>
-        <Slate
-          editor={slateEditor}
-          value={contents}
-          onChange={contents => handleTextChange(contents)}
-          placeholder="Loading text..."
-          >
-          <Toolbar>
-            <MarkButton format="bold"><FormatBold /></MarkButton>
-            <MarkButton format="italic"><FormatItalic /></MarkButton>
-            <MarkButton format="code"><Code /></MarkButton>
-            <BlockButton format="heading-one"><LooksOneIcon /></BlockButton>
-            <BlockButton format="heading-two"><LooksTwoIcon /></BlockButton>
-            <BlockButton format="block-quote"><FormatQuote /></BlockButton>
-            <BlockButton format="numbered-list"><FormatListNumbered /></BlockButton>
-            <BlockButton format="bulleted-list"><FormatListBulleted /></BlockButton>
-          </Toolbar>
-          <h2 className='section-title'>{title}</h2>
-          <Editable
-            renderElement={renderElement}
-            renderLeaf={renderLeaf}
-            placeholder="Enter some rich text…"
-            autoFocus
-            spellCheck
-            onKeyDown={event => {
-              for (const hotkey in HOTKEYS) {
-                if (isHotkey(hotkey, event)) {
-                  event.preventDefault()
-                  const mark = HOTKEYS[hotkey]
-                  toggleMark(slateEditor, mark)
-                }
-              }
-            }}
-          />
-        </Slate>
+        <h2 className='section-title'>{title}</h2>
+          <IdleTimer
+            ref={(ref) => { idleTimer = ref }}
+            element={document}
+            onIdle={() => saveOnIdle()}
+            debounce={250}
+            timeout={5000} />
+          { contents &&
+            <Slate
+              editor={slateEditor}
+              value={contents}
+              onChange={contents => handleTextChange(contents)}
+              placeholder="Loading text..."
+              >
+              <Toolbar>
+                <MarkButton format="bold"><FormatBold /></MarkButton>
+                <MarkButton format="italic"><FormatItalic /></MarkButton>
+                <MarkButton format="code"><Code /></MarkButton>
+                <BlockButton format="heading-one"><LooksOneIcon /></BlockButton>
+                <BlockButton format="heading-two"><LooksTwoIcon /></BlockButton>
+                <BlockButton format="block-quote"><FormatQuote /></BlockButton>
+                <BlockButton format="numbered-list"><FormatListNumbered /></BlockButton>
+                <BlockButton format="bulleted-list"><FormatListBulleted /></BlockButton>
+              </Toolbar>
+              <Editable
+                renderElement={renderElement}
+                renderLeaf={renderLeaf}
+                placeholder="Enter some rich text…"
+                autoFocus
+                spellCheck
+                onKeyDown={event => {
+                  for (const hotkey in HOTKEYS) {
+                    if (isHotkey(hotkey, event)) {
+                      event.preventDefault()
+                      const mark = HOTKEYS[hotkey]
+                      toggleMark(slateEditor, mark)
+                    }
+                  }
+                }}
+              />
+            </Slate>
+          }
       </section>
     </article>
   )
