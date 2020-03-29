@@ -5,7 +5,7 @@ import IdleTimer from 'react-idle-timer';
 
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
-import { Slate, Editable, withReact, useSlate } from 'slate-react';
+import { Slate, Editable, withReact, useSlate, ReactEditor } from 'slate-react';
 import { withHistory } from 'slate-history';
 
 import LooksOneIcon from '@material-ui/icons/LooksOne';
@@ -54,9 +54,19 @@ export const TextEditor = () => {
     handleSave();
   }
 
+
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
+  const { toSlatePoint } = ReactEditor;
+  ReactEditor.toSlatePoint = (...args) => {
+    try {
+      return toSlatePoint(...args);
+    } catch (err) {
+      if (!slateEditor.selection) return null;
+      return JSON.parse(JSON.stringify(slateEditor.selection.anchor));
+    }
+  };
   return (
     <article className='editor'>
       <section className='page'>
