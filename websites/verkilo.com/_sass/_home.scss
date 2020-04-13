@@ -7,6 +7,7 @@
       display: block;
       font-size: 50%;
     }
+    font-family: Oswald, sans-serif;
   }
   #cross-domain {
     width: 100%;
@@ -14,6 +15,16 @@
   .jumbotron {
     background: var(--primary-500);
     color: var(--secondary-A100) !important;
+    min-height: 85vh;
+    margin-top: -1em;
+    background-size: cover;
+    .display-4 {
+      font-family: Oswald, sans-serif;
+    }
+    .container,  .row {
+      height: 80vh;
+    }
+    text-shadow: 1px 1px 2px #000;
   }
   .fab {
     font-size: 2in;
@@ -38,7 +49,7 @@
       color: var(--primary-900) !important;
       border: none;
       width: 20em;
-      margin: 0 1em;
+      margin: 1em;
       min-height: 450px;
       .card-footer {
         background: var(--primary-50);

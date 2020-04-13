@@ -13,9 +13,13 @@
 }
 body {
   color: var(--foreground);
+  font-family: "Source Sans pro";
 }
 footer {
   background: var(--primary-800);
   color: var(--primary-50);
   text-align: center;
+}
+.brand-font {
+  font-family: "Sigmar One", sans-serif;
 }
