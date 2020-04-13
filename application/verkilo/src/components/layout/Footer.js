@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { EditorContext } from "../../context/EditorContext";
 
 export const Footer = () => {
-  const { saved } = useContext(EditorContext);
-  console.log("S",saved)
+  const { isSaved } = useContext(EditorContext);
+  console.log("S",isSaved)
   return (<footer className='footer'>
     <div>
       <span>West Side</span>
     </div>
     <div>
-      <span>{saved}</span>
+      <span>{(isSaved) ? "Draft saved" : ""}</span>
     </div>
     <div>
       Right Saieda

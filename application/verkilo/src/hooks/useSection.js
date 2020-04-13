@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { firebase } from '../firebase';
 // console.log(JSON.string)
 export const createSection = ({projectId, userId, title}) => {
-  const templateSection = {
-    contents: [{type: 'paragraph', children: [{ text: '' }]}],
-    projectId: projectId, userId, title,
-    title: "Untitled Document",
-    synopsis: "",
-    userId: "fefe2085-8a31-495f-b214-5535bc1de13a",
-    isActive: false
-  }
+  // const templateSection = {
+  //   contents: [{type: 'paragraph', children: [{ text: '' }]}],
+  //   projectId: projectId, userId, title,
+  //   title: "Untitled Document",
+  //   synopsis: "",
+  //   userId: "fefe2085-8a31-495f-b214-5535bc1de13a",
+  //   isActive: false
+  // }
 }
 export const useSection = sectionId => {
   const [section, setSection] = useState({contents: null});
@@ -34,8 +34,9 @@ export const useSection = sectionId => {
 };
 
 export const saveSection = section => {
-    firebase.firestore()
-      .collection('sections')
-      .doc(section.docId)
-      .update(section);
+  console.log("@saveSection:", section)
+  firebase.firestore()
+    .collection('sections')
+    .doc(section.docId)
+    .update(section);
 }

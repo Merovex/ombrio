@@ -1,78 +1,21 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-// Your variable overrides
-$theme-colors: (
-  "secondary": #21135f,
-  "primary": #7e0eb1,
-  "danger": #ff4136,
-  "light-bg": #FFFCF3,
-  "card-white": #FFFFFF,
-  "secondary-bg": #DAC7E4,
-  "site-fg": #21135f,
-);
-$jumbotron-bg: map-get($theme-colors, "primary");
-$jumbotron-color: map-get($theme-colors, "card-white");
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Sigmar+One');
+
+@import "colors";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Oswald|Sigmar+One');
 @import "custom";
 @import "pricing";
 @import "home";
 
-html, body {
-  height: 100%;
-  background: map-get($theme-colors, "light-bg") !important;
-  height: 100%;
-  color: map-get($theme-colors, "site-fg");
-  font-family: 'Open Sans', sans-serif;
+.bg-primary {
+  background: var(--navbar-background) !important;
 }
-$base: 38px;
-
-* {margin: 0; padding: 0; box-sizing: border-box}
-
-
-.brand-font {
-  font-family: "Sigmar One", sans-serif;
+body {
+  color: var(--foreground);
 }
-
-.jumbotron {
-  min-height: 95vh;
-  margin-top: -1em;
-  background: map-get($theme-colors, "light-bg") url(https://colorlib.com/preview/theme/comodo/img/banner/home-banner.jpg);
-  background-size: cover;
-  .display-4 {
-    font-family: Oswald, sans-serif;
-  }
-  .container,  .row {
-    height: 80vh;
-  }
-  text-shadow: 1px 1px 2px #000;
-}
-
-h1, h2{
-  small {
-    display: block;
-    font-variant: small-caps;
-    font-size: 50%;
-  }
-  font-family: Oswald, sans-serif;
-  text-align: center;
-  padding: 1em 0 2em 0;
-}
-.fab {
-  font-size: 1in;
-  color: map-get($theme-colors, "secondary");
-}
-.far {
-  margin-right: 0.5em;
-}
-
 footer {
-  background: lighten(map-get($theme-colors, "secondary"),15);
-  color: white;
-  padding-top: 1in;
-  .copyright {
-    background: rgba(#000, 0.3);
-    padding: 1em 0;
-  }
+  background: var(--primary-800);
+  color: var(--primary-50);
+  text-align: center;
 }
-.secondary-bg { background: map-get($theme-colors, "secondary-bg"); }

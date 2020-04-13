@@ -5,7 +5,7 @@ import IdleTimer from 'react-idle-timer';
 
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
-import { Slate, Editable, withReact, useSlate, ReactEditor } from 'slate-react';
+import { Slate, Editable, withReact, useSlate } from 'slate-react';
 import { withHistory } from 'slate-history';
 
 import LooksOneIcon from '@material-ui/icons/LooksOne';
@@ -28,8 +28,8 @@ const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 export const TextEditor = () => {
   let idleTimer = null;
-  const { section, setSaved } = useContext(EditorContext);
-  const [contents, setContents] = useState(section.contents);
+  const { section, isSaved, setSaved } = useContext(EditorContext);
+  const [contents, setContents] = useState(null);
   const [title, setTitle] = useState(section.title)
 
   useEffect(() => {
@@ -38,14 +38,19 @@ export const TextEditor = () => {
   },[section])
 
   const handleSave = () => {
-    saveSection({...section, contents: contents})
-    setSaved("Draft saved")
+    if (isSaved) return;
+    console.log("@handleSave", contents)
+    const newSection = {...section, contents: contents}
+    saveSection(newSection)
+    setSaved(true)
   }
   const handleTextChange = (contents) => {
     setSaved(false)
+    console.log("@handleTextChange", contents)
     setContents(contents)
+    // console.log("@handleTextChange-after", contents)
   }
-  const saveOnIdle = (e) => {
+  const saveOnIdle = () => {
     console.log("Saving...")
     handleSave();
   }
@@ -58,15 +63,7 @@ export const TextEditor = () => {
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
-  const { toSlatePoint } = ReactEditor;
-  ReactEditor.toSlatePoint = (...args) => {
-    try {
-      return toSlatePoint(...args);
-    } catch (err) {
-      if (!slateEditor.selection) return null;
-      return JSON.parse(JSON.stringify(slateEditor.selection.anchor));
-    }
-  };
+
   return (
     <article className='editor'>
       <section className='page'>
