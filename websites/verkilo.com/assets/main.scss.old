@@ -1,0 +1,115 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+
+
+@import "material-colors";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Sigmar+One');
+@import "custom";
+@import "pricing";
+@import "home";
+
+@media (prefers-color-scheme: llight) {
+  :root {
+    --primary: $primary-200;
+    // --foreground: #{contrast($gray-500, $dark-background,7)};
+    // --gray: #{$gray-400};
+    // --silver: #{$gray-700};
+    // --mono-2: #{$gray-500};
+    // --background: #{$gray-200};
+    // --navbar-background: #{$gray-100};
+    // --card-background: #{$gray-300};
+    // --black: #{$gray-200};
+    // --midnight: #{$gray-100};
+    // --highlight: #{$gray-500};
+    // --white: #{$gray-900};
+    // --red: #{contrast(red, $dark-background,4)};
+    // --green:  #{contrast($green, $dark-background,4)};
+    // --orange: #{contrast($orange, $dark-background,4)};
+    // --blue: #{contrast($blue, $dark-background,4)};
+    // --purple: #{contrast($purple, $dark-background,4)};
+    // --button-text: #{$gray-100};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #{contrast(#BE5046, $dark-background, 1.0)};
+    --foreground: #{contrast($gray-500, $dark-background,7)};
+    --gray: #{$gray-400};
+    --silver: #{$gray-700};
+    --mono-2: #{$gray-500};
+    --background: #{$gray-200};
+    --navbar-background: #{$gray-100};
+    --card-background: #{$gray-300};
+    --black: #{$gray-200};
+    --midnight: #{$gray-100};
+    --highlight: #{$gray-500};
+    --white: #{$gray-900};
+    --red: #{contrast(red, $dark-background,4)};
+    --green:  #{contrast($green, $dark-background,4)};
+    --orange: #{contrast($orange, $dark-background,4)};
+    --blue: #{contrast($blue, $dark-background,4)};
+    --purple: #{contrast($purple, $dark-background,4)};
+    --button-text: #{$gray-100};
+  }
+}
+
+html, body {
+  height: 100%;
+  background: map-get($theme-colors, "light-bg") !important;
+  height: 100%;
+  color: map-get($theme-colors, "site-fg");
+  font-family: 'Open Sans', sans-serif;
+}
+$base: 38px;
+
+* {margin: 0; padding: 0; box-sizing: border-box}
+
+
+.brand-font {
+  font-family: "Sigmar One", sans-serif;
+}
+
+.jumbotron {
+  min-height: 95vh;
+  margin-top: -1em;
+  background: map-get($theme-colors, "light-bg") url(https://colorlib.com/preview/theme/comodo/img/banner/home-banner.jpg);
+  background-size: cover;
+  .display-4 {
+    font-family: Oswald, sans-serif;
+  }
+  .container,  .row {
+    height: 80vh;
+  }
+  text-shadow: 1px 1px 2px #000;
+}
+
+h1, h2{
+  small {
+    display: block;
+    font-variant: small-caps;
+    font-size: 50%;
+  }
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  padding: 1em 0 2em 0;
+}
+.fab {
+  font-size: 1in;
+  color: map-get($theme-colors, "secondary");
+}
+.far {
+  margin-right: 0.5em;
+}
+
+footer {
+  background: lighten(map-get($theme-colors, "secondary"),15);
+  color: white;
+  padding-top: 1in;
+  .copyright {
+    background: rgba(#000, 0.3);
+    padding: 1em 0;
+  }
+}
+.secondary-bg { background: map-get($theme-colors, "secondary-bg"); }
