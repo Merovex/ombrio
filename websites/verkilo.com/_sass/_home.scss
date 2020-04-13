@@ -1,33 +1,58 @@
 #home {
+  color: var(--primary-900) !important;
   h2 {
     @extend .display-4;
+    text-align: center;
+    small {
+      display: block;
+      font-size: 50%;
+    }
+    font-family: Oswald, sans-serif;
   }
   #cross-domain {
     width: 100%;
   }
+  .jumbotron {
+    background: var(--primary-500);
+    color: var(--secondary-A100) !important;
+    min-height: 85vh;
+    margin-top: -1em;
+    background-size: cover;
+    .display-4 {
+      font-family: Oswald, sans-serif;
+    }
+    .container,  .row {
+      height: 80vh;
+    }
+    text-shadow: 1px 1px 2px #000;
+  }
+  .fab {
+    font-size: 2in;
+    color: var(--secondary-500);
+  }
+  .far {
+    font-size: 0.5in;
+    display: block;
+    color: var(--secondary-500);
+    text-align: center;
+    margin: 0.5em 0;
+  }
+  #value-proposition {
+    background: var(--secondary-100);
+    color: var(--primary-800);
+    // box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0px 10px 5px rgba(0,0,0,0.1),
+                inset 0px -10px 5px rgba(0,0,0,0.1);
+  }
   .feature.card {
-      background: map-get($theme-colors, "card-white");
+      background: var(--primary-50);
+      color: var(--primary-900) !important;
       border: none;
       width: 20em;
-      margin-left: 20px;
-      height: 450px;
-      padding-left: 20px;
+      margin: 1em;
+      min-height: 450px;
       .card-footer {
-        background: map-get($theme-colors, "card-white");
-      }
-      &:after {
-        content: "";
-        border-top: 225px solid transparent;
-        border-bottom: 225px solid transparent;
-        border-left: 20px solid map-get($theme-colors, "card-white");
-        position: absolute; right: -20px; top: 0;
-      }
-      &:before {
-        content: "";
-      	border-top: 225px solid transparent;
-      	border-bottom: 225px solid transparent;
-      	border-left: 20px solid map-get($theme-colors, "secondary-bg");
-      	position: absolute; left: 0; top: 0;
+        background: var(--primary-50);
       }
   }
   section {

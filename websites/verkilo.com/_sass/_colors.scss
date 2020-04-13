@@ -1,0 +1,98 @@
+@import 'contrast';
+
+$system-fonts: -apple-system,BlinkMacSystemFont,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+
+@import 'blue';
+
+$gray-50: #f2f2f3;
+$gray-100: #dfdde2;
+$gray-200: #cac7cf;
+$gray-300: #b4b1bb;
+$gray-400: #a4a0ad;
+$gray-500: #948f9e;
+$gray-600: #8c8796;
+$gray-700: #817c8c;
+$gray-800: #777282;
+$gray-900: #656070;
+$black: #161519;
+
+$red: #BE5046;
+$green: #2C7D53;
+$orange: #B85119;
+$blue: #4A6BBF;
+$purple: #BD4275;
+
+:root {
+  --font-heading: Oswald,#{$system-fonts};
+  --font-monospace: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  --font-sans: "Source Sans Pro",#{$system-fonts};
+  --font-serif: "Source Serif Pro",#{$system-fonts};
+  --font-system: #{$system-fonts};
+  --foreground: #{contrast($gray-500, #FFF,7)};
+  --gray: #{$gray-300};
+  --silver: #{$gray-700};
+  --mono-2: #{$gray-600};
+  --background: #{$gray-900};
+  --card-background: #{$gray-800};
+  --midnight: #{$gray-100};
+  --black: #{$gray-200};
+  --highlight: #{$gray-500};
+  --white: #{$gray-900};
+  --red: #{$red};
+  --green:  #{$green};
+  --orange: #{$orange};
+  --blue: #{$blue};
+  --primary-50: #{$primary-50};
+  --primary-100: #{$primary-100};
+  --primary-200: #{$primary-200};
+  --primary-300: #{$primary-300};
+  --primary-400: #{$primary-400};
+  --primary-500: #{$primary-500};
+  --primary-600: #{$primary-600};
+  --primary-700: #{$primary-700};
+  --primary-800: #{$primary-800};
+  --primary-900: #{$primary-900};
+  --primary-A100: #{$primary-A100};
+  --primary-A200: #{$primary-A200};
+  --primary-A400: #{$primary-A400};
+  --primary-A700: #{$primary-A700};
+  --navbar-background: #{$primary-800};
+  --button-text: #{$gray-900};
+  --secondary-50: #{$secondary-50};
+  --secondary-100: #{$secondary-100};
+  --secondary-200: #{$secondary-200};
+  --secondary-300: #{$secondary-300};
+  --secondary-400: #{$secondary-400};
+  --secondary-500: #{$secondary-500};
+  --secondary-600: #{$secondary-600};
+  --secondary-700: #{$secondary-700};
+  --secondary-800: #{$secondary-800};
+  --secondary-900: #{$secondary-900};
+  --secondary-A100: #{$secondary-A100};
+  --secondary-A200: #{$secondary-A200};
+  --secondary-A400: #{$secondary-A400};
+  --secondary-A700: #{$secondary-A700};
+}
+$dark-background: $primary-900;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #{contrast(#BE5046, $dark-background, 1.0)};
+    --foreground: #{contrast($gray-500, $dark-background,7)};
+    --gray: #{$gray-400};
+    --silver: #{$gray-700};
+    --mono-2: #{$gray-500};
+    --background: #{$gray-200};
+    --navbar-background: #{$gray-100};
+    --card-background: #{$gray-300};
+    --black: #{$gray-200};
+    --midnight: #{$gray-100};
+    --highlight: #{$gray-500};
+    --white: #{$gray-900};
+    --red: #{contrast(red, $dark-background,4)};
+    --green:  #{contrast($green, $dark-background,4)};
+    --orange: #{contrast($orange, $dark-background,4)};
+    --blue: #{contrast($blue, $dark-background,4)};
+    --purple: #{contrast($purple, $dark-background,4)};
+    --button-text: #{$gray-100};
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useContext, useMemo, useState, useEffect, useCallback } from 'react';
-import { useSection, saveSection } from '../../hooks';
+import { saveSection } from '../../hooks';
 import { EditorContext } from "../../context/EditorContext";
-import IdleTimer from 'react-idle-timer'
+import IdleTimer from 'react-idle-timer';
 
 import isHotkey from 'is-hotkey';
 import { createEditor, Transforms, Editor } from 'slate';
@@ -28,8 +28,8 @@ const LIST_TYPES = ['numbered-list', 'bulleted-list']
 
 export const TextEditor = () => {
   let idleTimer = null;
-  const { section, setSection } = useContext(EditorContext);
-  const [contents, setContents] = useState(section.contents);
+  const { section, isSaved, setSaved } = useContext(EditorContext);
+  const [contents, setContents] = useState(null);
   const [title, setTitle] = useState(section.title)
 
   useEffect(() => {
@@ -37,21 +37,33 @@ export const TextEditor = () => {
     setTitle(section.title)
   },[section])
 
-  const handleTextChange = (contents) => {
-    setContents(contents)
+  const handleSave = () => {
+    if (isSaved) return;
+    console.log("@handleSave", contents)
+    const newSection = {...section, contents: contents}
+    saveSection(newSection)
+    setSaved(true)
   }
-  const saveOnIdle = (e) => {
-    // console.log("Saving...")
-    saveSection({...section, contents: contents})
+  const handleTextChange = (contents) => {
+    setSaved(false)
+    console.log("@handleTextChange", contents)
+    setContents(contents)
+    // console.log("@handleTextChange-after", contents)
+  }
+  const saveOnIdle = () => {
+    console.log("Saving...")
+    handleSave();
   }
   const handleBlur = (e) => {
-    // console.log("Blurred save",e)
-    saveSection({...section, contents: contents})
+    console.log("Blurred save",e)
+    handleSave();
   }
+
 
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const slateEditor = useMemo(() => withHistory(withReact(createEditor())), []);
+
   return (
     <article className='editor'>
       <section className='page'>

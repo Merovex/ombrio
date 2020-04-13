@@ -1,4 +1,4 @@
-section.pricing {
+section.pricing, #cta {
   h2 {
     margin: 0; padding: 0;
     color: #FFF;
@@ -11,8 +11,8 @@ section.pricing {
       margin-bottom: 4em;
     }
   }
-  background: map-get($theme-colors, "primary");
-  background: linear-gradient(to right, map-get($theme-colors, "secondary"), map-get($theme-colors, "primary"));
+  background: var(--primary-600);
+  // background: linear-gradient(to right, map-get($theme-colors, "secondary"), map-get($theme-colors, "primary"));
   .card {
     border: none;
     border-radius: 0.5rem;
@@ -22,10 +22,9 @@ section.pricing {
   hr {
     margin: 1.5rem 0;
   }
-  $preferred-bg: map-get($theme-colors, "card-white");
   .preferred {
-    background: $preferred-bg;
-    border: 1em solid $preferred-bg;
+    background: var(--secondary-200);
+    border: 1em solid var(--secondary-200);
     margin-top: -1em;
   }
   .card-title {
@@ -55,6 +54,9 @@ section.pricing {
     padding: 1rem;
     opacity: 0.7;
     transition: all 0.2s;
+  }
+  form {
+    color: var(--primary-50);
   }
 }
 

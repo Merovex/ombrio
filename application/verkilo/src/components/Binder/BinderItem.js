@@ -22,18 +22,17 @@ export const BinderItem = ({
   const element = useRef();
 
   useDoubleClick({
-    onSingleClick: e => {
+    onSingleClick: () => {
       setSectionId(item.docId)
-      console.log(item.docId, section)
     },
-    onDoubleClick: e => {
+    onDoubleClick: () => {
       setNewTitle(item.title);
       setShowInput(true);
       document.getElementById(inputId).focus();
     },
     ref: element
   });
-  const handleInputBlur = (e) => {
+  const handleInputBlur = () => {
     setNewTitle(item.title);
     setShowInput(false);
   }
@@ -53,7 +52,7 @@ export const BinderItem = ({
     }
   }
 
-  return <Draggable
+  return (<Draggable
     key={item.docId}
     draggableId={item.docId}
     index={index}>
@@ -66,7 +65,7 @@ export const BinderItem = ({
       >
         <div ref={element}
           onKeyDown={event => handleKeyPress(event)}
-          onBlur={event => handleInputBlur()}
+          onBlur={() => handleInputBlur()}
           onChange={event => handleTitleChange(event)}
           >
           <span id={spanId}
@@ -79,5 +78,5 @@ export const BinderItem = ({
         </div>
       </div>
     )}
-  </Draggable>
+  </Draggable>)
 }

@@ -1,16 +1,22 @@
 footer {
   background-color: var(--footer-bg);
-  grid-area: footer;
-  padding: 0 8px;
-
-  height: 30px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  flex: 1;
+  max-height: 1.8rem;
   line-height: 1;
   color: #FFF;
+  justify-content: space-between;
+  div {
+    margin: 0 1em;
+  }
   span {
+    // border: 1px solid red;
     min-height: 30px;
-    font-size: 13px;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
+    padding: 0 4px;
   }
 }
