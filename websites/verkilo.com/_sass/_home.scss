@@ -1,8 +1,10 @@
 #home {
-  color: var(--primary-900) !important;
+  color: var(--foreground);
+  background: var(--background) !important;
   h2 {
     @extend .display-4;
     text-align: center;
+    color: var(--foreground);
     small {
       display: block;
       font-size: 50%;
@@ -12,9 +14,14 @@
   #cross-domain {
     width: 100%;
   }
+  .primary-bg {
+    background: var(--jumbo-bg) !important;
+    color: var(--jumbo-fg) !important;
+    h2 {
+      color: var(--jumbo-fg) !important;
+    }
+  }
   .jumbotron {
-    background: var(--primary-500);
-    color: var(--secondary-A100) !important;
     min-height: 85vh;
     margin-top: -1em;
     background-size: cover;
@@ -28,31 +35,31 @@
   }
   .fab {
     font-size: 2in;
-    color: var(--secondary-500);
+    color: var(--feature-icon);
   }
-  .far {
-    font-size: 0.5in;
-    display: block;
-    color: var(--secondary-500);
-    text-align: center;
-    margin: 0.5em 0;
-  }
+
   #value-proposition {
-    background: var(--secondary-100);
-    color: var(--primary-800);
-    // box-shadow: inset 0 0 10px #000000;
+    color: var(--secondary-fg) !important;
+    background: var(--secondary-bg) !important;
+    h2 {
+      color: var(--secondary-fg);
+    }
     box-shadow: inset 0px 10px 5px rgba(0,0,0,0.1),
                 inset 0px -10px 5px rgba(0,0,0,0.1);
   }
   .feature.card {
-      background: var(--primary-50);
-      color: var(--primary-900) !important;
+      background: var(--card-bg);
+      color: var(--card-fg);
       border: none;
       width: 20em;
       margin: 1em;
       min-height: 450px;
-      .card-footer {
-        background: var(--primary-50);
+      i {
+        font-size: 0.5in;
+        display: block;
+        color: var(--card-icon);
+        text-align: center;
+        margin: 0.5em 0;
       }
   }
   section {
